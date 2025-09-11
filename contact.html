@@ -1,72 +1,53 @@
-<!doctype html><html lang="fr"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact — Ridgee Production</title>
-<meta name="description" content="Devis & informations — Entertainment & Artistic Direction : shows, booking, corporate.">
-<link rel="stylesheet" href="style.css"><link rel="icon" href="assets/img/logo-ridgee.jpg">
-</head><body>
-<header><div class="container topbar">
-  <a href="index.html"><img src="assets/img/logo-ridgee.jpg" alt="Ridgee Production"></a>
-  <nav>
-    <a href="services.html">Services</a>
-    <a href="references.html">Références</a>
-    <a href="artistes.html">Artistes & Shows</a>
-    <a href="a-propos.html">À propos</a>
-    <a class="cta" href="contact.html">Contact</a>
-  </nav>
-</div></header>
-
-<main>
-<section class="section">
-  <div class="container" style="max-width:900px">
-    <h1>Contact</h1>
-    <p class="subtitle">Parlez-nous de votre projet. Réponse rapide.</p>
-    <div class="grid cols-2">
-      <div class="card">
-        <form id="contact-form" action="https://formspree.io/f/xvgbypwy" method="POST">
-          <label>Nom / Société<br><input required name="name" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px"></label><br><br>
-          <label>Email<br><input required type="email" name="email" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px"></label><br><br>
-          <label>Téléphone<br><input name="phone" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px"></label><br><br>
-          <label>Ville / Lieu<br><input name="city" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px"></label><br><br>
-          <label>Votre besoin<br><textarea required name="message" rows="6" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px"></textarea></label><br><br>
-          <input type="hidden" name="_subject" value="Devis / Contact — ridgeeproduction.com">
-          <input type="text" name="_gotcha" style="display:none">
-          <button class="btn btn-primary" type="submit">Envoyer</button>
-          <div id="form-status" class="small" style="margin-top:10px"></div>
-        </form>
-      </div>
-      <div class="card">
-        <p><strong>Email :</strong> <a href="mailto:contact@ridgeeproduction.com">contact@ridgeeproduction.com</a><br>
-           <strong>Téléphone :</strong> <a href="tel:+33610472999">+33 6 10 47 29 99</a><br>
-           <strong>Adresse :</strong> 13 rue Pierre Mauroy, 75018 Paris</p>
-        <h3>Zones couvertes</h3>
-        <p>France (Paris, Toulouse, Lyon, Lille, Nice) • Europe • Afrique du Nord francophone.</p>
-      </div>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Contact — Ridgee Production</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Demandez un devis, parlons de votre événement. Paris · Toulouse · Lyon · Lille · Nice — International.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/Logo_Ridgee.jpg">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-row container">
+    <a class="logo" href="/"><img src="/Logo_Ridgee.jpg" alt="Ridgee Production"></a>
+    <div class="right">
+      <a href="/services.html">Services</a>
+      <a href="/artistes.html">Artistes & Shows</a>
+      <a href="/references.html">Références</a>
+      <a href="/a-propos.html">À propos</a>
     </div>
   </div>
-</section>
+</header>
+
+<main class="container">
+  <h1>Contact</h1>
+  <div class="grid" style="grid-template-columns:1fr 1fr;gap:24px">
+    <div class="card">
+      <form class="form" action="https://formspree.io/f/xvgbypwy" method="POST">
+        <input type="hidden" name="_redirect" value="https://ridgeeproduction.com/merci.html">
+        <label>Votre nom<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Sujet<input type="text" name="subject" required></label>
+        <label>Message<textarea name="message" rows="7" required></textarea></label>
+        <button class="btn brand" type="submit">Envoyer</button>
+      </form>
+      <p class="small mono" style="margin-top:8px">Nous répondons sous 24–48h ouvrées.</p>
+    </div>
+
+    <div class="card">
+      <h2>Coordonnées</h2>
+      <p><b>Email</b> : <a href="mailto:contact@ridgeeproduction.com">contact@ridgeeproduction.com</a><br>
+         <b>Tél</b> : <a href="tel:+33610472999">+33 6 10 47 29 99</a></p>
+      <p><b>Adresse</b> : 13 rue Pierre Mauroy, 75018 Paris</p>
+      <img src="/Sabri.jpg" alt="Ridgee Production — Contact">
+    </div>
+  </div>
 </main>
 
-<footer>
-  <div class="container footer-grid">
-    <div><h3>Ridgee Production</h3><p class="small">Entertainment & Artistic Direction — shows, booking, corporate.</p><hr><p class="small">© <span id="y"></span> Ridgee Production.</p></div>
-    <div><h4>Coordonnées</h4><p class="small">contact@ridgeeproduction.com<br>+33 6 10 47 29 99<br>13 rue Pierre Mauroy, 75018 Paris</p></div>
-    <div><h4>Navigation</h4><p class="small"><a href="services.html">Services</a><br><a href="references.html">Références</a><br><a href="artistes.html">Artistes & Shows</a><br><a href="a-propos.html">À propos</a><br><a href="contact.html">Contact</a></p></div>
-  </div>
+<footer class="container footer small">
+  <p>© Ridgee Production — contact@ridgeeproduction.com</p>
 </footer>
-
-<script>
-const form = document.getElementById('contact-form');
-const statusEl = document.getElementById('form-status');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  statusEl.textContent = 'Envoi en cours...';
-  const data = new FormData(form);
-  try {
-    const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' }});
-    if (res.ok) { statusEl.style.color='#0a7d29'; statusEl.textContent='Merci ! Votre message a bien été envoyé.'; form.reset(); }
-    else { const err = await res.json().catch(()=>({})); statusEl.style.color='#c0392b'; statusEl.textContent = err && err.errors ? err.errors.map(e=>e.message).join(', ') : 'Erreur. Réessayez.'; }
-  } catch(e2){ statusEl.style.color='#c0392b'; statusEl.textContent='Impossible d’envoyer le message (connexion).'; }
-});
-document.getElementById('y').textContent=new Date().getFullYear();
-</script>
-</body></html>
+</body>
+</html>
