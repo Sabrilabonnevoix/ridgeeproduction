@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ridgeeproduction.com/sitemap.xml
