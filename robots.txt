@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# Empêche l’indexation d’éventuels fichiers techniques
-Disallow: /.git/
-Disallow: /README.md
-
 Sitemap: https://ridgeeproduction.com/sitemap.xml
