@@ -2,36 +2,50 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>À propos — Ridgee Production</title>
 <meta name="description" content="Sabri — producteur & entertainment manager : spectacle vivant et événementiel corporate.">
-<link rel="stylesheet" href="/assets/css/style.css"><link rel="icon" href="/assets/img/logo-ridgee.jpg">
+<link rel="stylesheet" href="style.css"><link rel="icon" href="assets/img/logo-ridgee.jpg">
 </head><body>
-<header><div class="container nav">
-  <a href="/"><img src="/assets/img/logo-ridgee.jpg" alt="Ridgee Production"></a>
-  <ul>
-    <li><a href="/services.html">Services</a></li>
-    <li><a href="/references.html">Références</a></li>
-    <li><a href="/artistes.html">Artistes & Shows</a></li>
-    <li><a href="/a-propos.html">À propos</a></li>
-    <li><a class="cta" href="/contact.html">Contact</a></li>
-  </ul></div></header>
+<header><div class="container topbar">
+  <a href="index.html"><img src="assets/img/logo-ridgee.jpg" alt="Ridgee Production"></a>
+  <nav>
+    <a href="services.html">Services</a>
+    <a href="references.html">Références</a>
+    <a href="artistes.html">Artistes & Shows</a>
+    <a href="a-propos.html">À propos</a>
+    <a class="cta" href="contact.html">Contact</a>
+  </nav>
+</div></header>
 
-<main><div class="container">
-<h1>À propos — Sabri</h1>
-<div class="grid cols-2">
-  <figure class="card">
-    <img src="/assets/img/sabri.jpg" alt="Sabri — Ridgee Production" style="width:100%;border-radius:12px">
-  </figure>
-  <div class="card">
-    <p>Sabri est producteur et entertainment manager. Son parcours démarre dans le spectacle vivant chez une grande société de production toulousaine (spécialisée dans le cirque), où il développe un réseau solide en France et à l’international auprès d’artistes et d’équipes techniques.</p>
-    <p>Avec Ridgee Production, il allie cette culture de scène à une expertise corporate : cadrage budgétaire, planning opérationnel, négociation, coordination multi-équipes et qualité d’exécution.</p>
-    <div class="kpis">
-      <div class="kpi">Direction artistique</div>
-      <div class="kpi">Production exécutive</div>
-      <div class="kpi">Booking multi-artistes</div>
+<main>
+<section class="section">
+  <div class="container">
+    <h1>À propos — Sabri</h1>
+    <div class="grid cols-2">
+      <div class="card">
+        <img src="assets/img/sabri.jpg" alt="Sabri — Ridgee Production" style="width:100%;border-radius:12px">
+      </div>
+      <div class="card">
+        <p>Sabri est producteur et entertainment manager. Son parcours démarre dans le spectacle vivant chez une grande société de production toulousaine (spécialisée dans le cirque), où il développe un réseau solide en France et à l’international auprès d’artistes et d’équipes techniques.</p>
+        <p>Avec Ridgee Production, il allie cette culture de scène à une expertise corporate : cadrage budgétaire, planning opérationnel, négociation, coordination multi-équipes et qualité d’exécution.</p>
+        <div class="chips">
+          <span class="chip">Direction artistique</span>
+          <span class="chip">Production exécutive</span>
+          <span class="chip">Booking multi-artistes</span>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div></main>
+</section>
+</main>
 
-<footer>…</footer>
+<footer>
+  <div class="container footer-grid">
+    <div><h3>Ridgee Production</h3><p class="small">Entertainment & Artistic Direction — shows, booking, corporate.</p><hr><p class="small">© <span id="y"></span> Ridgee Production.</p></div>
+    <div><h4>Coordonnées</h4><p class="small">contact@ridgeeproduction.com<br>+33 6 10 47 29 99<br>13 rue Pierre Mauroy, 75018 Paris</p></div>
+    <div><h4>Navigation</h4><p class="small"><a href="services.html">Services</a><br><a href="references.html">Références</a><br><a href="artistes.html">Artistes & Shows</a><br><a href="a-propos.html">À propos</a><br><a href="contact.html">Contact</a></p></div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body></html>
+
 <script>document.getElementById('y')&&(document.getElementById('y').textContent=new Date().getFullYear())</script>
 </body></html>
