@@ -57,3 +57,7 @@ p.lead{color:var(--muted);font-size:1.1rem}
   .cols-2{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
 }
+.nav a.active {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 8px;
+}
