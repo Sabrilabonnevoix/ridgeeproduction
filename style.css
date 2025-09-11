@@ -61,3 +61,19 @@ p.lead{color:var(--muted);font-size:1.1rem}
   border-bottom: 2px solid var(--accent);
   padding-bottom: 8px;
 }
+/* Navigation sticky */
+header.nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white; /* ou noir si tu préfères */
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+/* Pour éviter que le contenu passe sous la nav */
+body {
+  padding-top: 80px; /* ajuste selon la hauteur de ta nav */
+}
+
