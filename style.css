@@ -3,8 +3,8 @@
   --ink:#12131a;       /* texte principal */
   --muted:#6b7280;     /* texte secondaire */
   --line:#e9eaf0;      /* lignes/grilles */
-  --brand:#e91e63;     /* couleur principale (rose framboise) */
-  --brand-2:#ff8a00;   /* accent secondaire (orange) */
+  --brand:#e91e63;     /* couleur principale */
+  --brand-2:#ff8a00;   /* accent secondaire */
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
@@ -16,22 +16,21 @@ a:hover{text-decoration:underline}
 header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
 .topbar{display:flex;align-items:center;gap:18px}
 .topbar img{height:48px}
-nav{margin-left:auto;display:flex;gap:18px}
+nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
 nav a{padding:10px 14px;border:1px solid var(--line);border-radius:10px;color:var(--ink);font-weight:600}
 nav a.cta{border-color:transparent;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff}
 
 .hero{border-bottom:1px solid var(--line);padding:48px 0}
 .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
 h1{font-size:42px;line-height:1.1;margin:0 0 10px}
+h2{font-size:30px;margin:0 0 8px}
 .lead{color:var(--muted);font-size:18px}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
-.chip{padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:#111;background:#fff}
+.chip{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fff}
 .btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:700}
 .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;border:none}
-.panel{border:1px solid var(--line);border-radius:14px;background:#fff;padding:16px}
 
 .section{padding:56px 0;border-bottom:1px solid var(--line)}
-.section h2{font-size:30px;margin:0 0 8px}
 .subtitle{color:var(--muted);margin:0 0 18px}
 .grid{display:grid;gap:20px}
 .cols-3{grid-template-columns:repeat(3,1fr)}
@@ -39,6 +38,7 @@ h1{font-size:42px;line-height:1.1;margin:0 0 10px}
 .card{border:1px solid var(--line);border-radius:14px;background:#fff;padding:18px}
 .card h3{margin-top:0}
 
+.panel{border:1px solid var(--line);border-radius:14px;background:#fff;padding:16px}
 video{width:100%;border-radius:12px;border:1px solid var(--line);background:#000}
 figure{margin:0}
 .caption{color:var(--muted);font-size:14px;margin-top:6px}
