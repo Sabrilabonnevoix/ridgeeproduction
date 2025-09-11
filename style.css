@@ -67,7 +67,7 @@ header.nav.sticky {
   top: 0;
   left: 0;
   right: 0;
-  background: white; /* ou noir si tu préfères */
+  background: black;
   z-index: 1000;
   border-bottom: 1px solid #eee;
 }
