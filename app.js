@@ -1,0 +1,1 @@
+const burger=document.querySelector('.burger');const header=document.querySelector('.header');if(burger&&header){burger.addEventListener('click',()=>{const open=header.classList.toggle('open');burger.setAttribute('aria-expanded',open?'true':'false');});}
