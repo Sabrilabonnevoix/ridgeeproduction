@@ -8,7 +8,7 @@
   <link rel="icon" href="/logo-ridgee.jpg"/>
   <meta property="og:title" content="Ridgee Production — Événementiel &amp; Audiovisuel"/>
   <meta property="og:description" content="Production d'événements et audiovisuelle — France &amp; International."/>
-  <meta property="og:image" content="/Sabri.jpg"/>
+  <meta property="og:image" content="/Drag-Queen.jpg"/>
   <meta property="og:type" content="website"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -16,7 +16,7 @@
 <style>
 :root{
   --bg:#080808;--bg2:#0d0d0d;--bg3:#131313;--card:#191919;
-  --line:rgba(255,255,255,.07);--line2:rgba(255,255,255,.04);
+  --line:rgba(255,255,255,.07);
   --w:#fff;--m:rgba(255,255,255,.44);--m2:rgba(255,255,255,.68);
   --p0:#8B2FC9;--p1:#C4256E;--p2:#FF6B2B;
   --grad:linear-gradient(90deg,var(--p0),var(--p1),var(--p2));
@@ -25,7 +25,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--w);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden}
-img{display:block;width:100%;height:100%;object-fit:cover}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 ul{list-style:none}
 .wrap{max-width:1240px;margin:0 auto;padding:0 44px}
@@ -44,8 +44,10 @@ ul{list-style:none}
 .rv{opacity:0;transform:translateY(38px);transition:opacity .75s ease,transform .75s ease}
 .rv.on{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* NAV */
 .header{position:fixed;top:0;left:0;right:0;z-index:500;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
-.header.scrolled{background:rgba(8,8,8,.92);backdrop-filter:blur(24px) saturate(160%);border-color:var(--line)}
+.header.scrolled{background:rgba(8,8,8,.92);backdrop-filter:blur(24px);border-color:var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{display:flex;align-items:center;gap:13px;flex-shrink:0}
 .brand-svg{height:42px;width:auto;flex-shrink:0}
@@ -67,35 +69,48 @@ ul{list-style:none}
 .mobile-nav a{font-family:'Syne',sans-serif;font-size:14px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--m2);padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
 .mobile-nav a:hover{color:var(--w)}
 .mobile-nav .mobile-cta{border:none;margin-top:16px;background:var(--grad);color:var(--w);padding:14px 24px;text-align:center;border-radius:2px}
+
+/* HERO */
 .hero{min-height:100vh;padding-top:74px;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 70% at 65% 65%,rgba(139,47,201,.22) 0%,transparent 65%),radial-gradient(ellipse 35% 45% at 85% 15%,rgba(255,107,43,.12) 0%,transparent 55%),radial-gradient(ellipse 40% 50% at 20% 80%,rgba(196,37,110,.09) 0%,transparent 60%)}
+.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 70% at 65% 65%,rgba(139,47,201,.22) 0%,transparent 65%),radial-gradient(ellipse 35% 45% at 85% 15%,rgba(255,107,43,.12) 0%,transparent 55%)}
 .hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:68px 68px;mask-image:radial-gradient(ellipse 75% 75% at 28% 50%,black,transparent 72%)}
 .hero-col{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:80px 40px 80px 0;align-self:stretch}
 .hero-badge{display:inline-flex;align-items:center;gap:9px;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.38em;text-transform:uppercase;color:var(--m2);border:1px solid var(--line);padding:8px 16px;border-radius:100px;margin-bottom:30px;width:fit-content;opacity:0;transform:translateY(18px);animation:fadeUp .8s ease forwards .1s}
 .hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--grad135);flex-shrink:0}
 .hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(70px,9.5vw,136px);line-height:.87;letter-spacing:.025em;color:var(--w);margin-bottom:18px;opacity:0;transform:translateY(28px);animation:fadeUp .9s ease forwards .25s}
 .hero-lead{font-size:15.5px;color:var(--m2);line-height:1.8;max-width:450px;margin-bottom:38px;opacity:0;transform:translateY(20px);animation:fadeUp .8s ease forwards .44s}
-.hero-kpis{display:flex;gap:0;border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-bottom:38px;opacity:0;transform:translateY(18px);animation:fadeUp .8s ease forwards .58s}
+.hero-kpis{display:flex;border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-bottom:38px;opacity:0;transform:translateY(18px);animation:fadeUp .8s ease forwards .58s}
 .kpi-box{flex:1;padding:16px 18px;border-right:1px solid var(--line)}
 .kpi-box:last-child{border-right:none}
-.kpi-val{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.03em;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.kpi-val{font-family:'Bebas Neue',sans-serif;font-size:26px;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .kpi-lbl{font-family:'Syne',sans-serif;font-size:9px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--m);margin-top:3px}
 .hero-actions{display:flex;align-items:center;gap:22px;opacity:0;transform:translateY(18px);animation:fadeUp .8s ease forwards .72s}
 .hero-img-col{position:relative;min-height:600px;overflow:hidden}
-.hero-img-col img{position:absolute;inset:0;object-position:top center}
+.hero-img-col img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center}
 .hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,transparent 28%),linear-gradient(to top,var(--bg) 0%,transparent 22%)}
 .hero-img-tag{position:absolute;bottom:28px;right:28px;z-index:2;font-family:'Syne',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--m2);background:rgba(255,255,255,.05);backdrop-filter:blur(14px);border:1px solid var(--line);padding:8px 16px;border-radius:2px}
 .hero-scroll{position:absolute;bottom:32px;left:44px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;animation:fadeUp .8s ease forwards 1.1s}
 .scroll-line{width:1px;height:52px;background:linear-gradient(to bottom,rgba(255,255,255,.55),transparent);animation:scrollPulse 2s ease-in-out infinite}
 .scroll-lbl{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.38em;text-transform:uppercase;color:var(--m);writing-mode:vertical-rl;transform:rotate(180deg)}
+
+/* TICKER */
 .ticker{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:13px 0}
 .ticker-track{display:inline-flex;white-space:nowrap;animation:tickerMove 35s linear infinite}
 .ticker-item{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--m);padding:0 32px;display:inline-flex;align-items:center;gap:32px}
 .ticker-dot{width:4px;height:4px;border-radius:50%;background:var(--p1);flex-shrink:0}
-.expertise{background:var(--bg2);border-bottom:1px solid var(--line);padding:130px 0}
+
+/* ABOUT */
+.about{background:var(--bg2);padding:130px 0;border-bottom:1px solid var(--line)}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-img{position:relative;overflow:hidden;border:1px solid var(--line)}
+.about-img img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5}
+.about-img-tag{position:absolute;bottom:20px;left:20px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--m2);background:rgba(0,0,0,.6);backdrop-filter:blur(12px);border:1px solid var(--line);padding:7px 14px;border-radius:2px}
+
+/* EXPERTISE */
+.expertise{background:var(--bg);border-bottom:1px solid var(--line);padding:130px 0}
 .expertise-intro{margin-bottom:72px}
 .expertise-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);border:1px solid var(--line)}
-.pillar{background:var(--bg2);padding:56px 48px;position:relative;overflow:hidden;transition:background .35s}
+.pillar{background:var(--bg);padding:56px 48px;position:relative;overflow:hidden;transition:background .35s}
 .pillar::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .45s ease}
 .pillar:hover{background:var(--bg3)}
 .pillar:hover::before{transform:scaleX(1)}
@@ -107,6 +122,31 @@ ul{list-style:none}
 .pillar-list{display:flex;flex-direction:column;gap:9px}
 .pillar-list li{display:flex;align-items:center;gap:11px;font-size:13px;color:var(--m2)}
 .pillar-list li::before{content:'';display:block;width:14px;height:1px;background:var(--grad);flex-shrink:0}
+
+/* VIDEOS */
+.videos{background:var(--bg2);padding:130px 0;border-bottom:1px solid var(--line)}
+.videos-hd{margin-bottom:56px}
+.videos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+.video-item{position:relative;overflow:hidden;background:var(--bg3);aspect-ratio:16/9;cursor:pointer}
+.video-item video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.video-item:hover video{transform:scale(1.03)}
+.video-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 50%);opacity:1;transition:opacity .3s}
+.video-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;transition:background .3s,transform .3s}
+.video-item:hover .video-play{background:rgba(196,37,110,.5);transform:translate(-50%,-50%) scale(1.1)}
+.video-play svg{width:18px;height:18px;color:white;margin-left:3px}
+.video-info{position:absolute;bottom:0;left:0;right:0;padding:20px 24px}
+.video-tag{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--p1);margin-bottom:5px}
+.video-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--w)}
+
+/* MODAL VIDEO */
+.modal{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.92);backdrop-filter:blur(20px);align-items:center;justify-content:center}
+.modal.open{display:flex}
+.modal-inner{position:relative;width:90%;max-width:960px}
+.modal-inner video{width:100%;border-radius:2px;display:block}
+.modal-close{position:absolute;top:-44px;right:0;background:none;border:none;color:var(--m2);font-size:28px;cursor:pointer;line-height:1;transition:color .2s}
+.modal-close:hover{color:var(--w)}
+
+/* SERVICES */
 .services{background:var(--bg);padding:130px 0}
 .services-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:64px;gap:32px}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
@@ -119,20 +159,32 @@ ul{list-style:none}
 .svc:hover .svc-ico{color:var(--p1)}
 .svc-name{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--w);margin-bottom:12px}
 .svc-desc{font-size:13.5px;color:var(--m);line-height:1.8}
+
+/* REFS */
 .refs{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:130px 0}
 .refs-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:88px;align-items:start}
-.refs-highlights{display:flex;flex-direction:column;gap:0;margin-top:42px}
+.refs-highlights{display:flex;flex-direction:column;margin-top:42px}
 .ref-item{display:flex;align-items:flex-start;gap:22px;padding:24px 0;border-bottom:1px solid var(--line)}
 .ref-item:first-child{border-top:1px solid var(--line)}
 .ref-ico{width:40px;height:40px;flex-shrink:0;background:rgba(139,47,201,.1);border:1px solid rgba(139,47,201,.22);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--p1)}
 .ref-title{font-family:'Syne',sans-serif;font-size:14.5px;font-weight:700;color:var(--w);margin-bottom:4px}
 .ref-sub{font-size:13px;color:var(--m);line-height:1.65}
+
+/* CLIENTS LOGOS */
+.clients-logo-row{margin-top:40px;padding:28px 32px;background:var(--bg3);border:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.clients-logo-label{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--m);white-space:nowrap}
+.clients-logo-img{height:32px;width:auto;object-fit:contain;opacity:.5;filter:grayscale(1);transition:.3s}
+.clients-logo-img:hover{opacity:1;filter:grayscale(0)}
+
+/* GEO */
 .geo-label{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--m);margin-bottom:22px}
 .geo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line);margin-bottom:28px}
 .geo-city{background:var(--bg2);padding:14px 16px;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--m);text-align:center;transition:.25s;cursor:default}
 .geo-city:hover{background:rgba(196,37,110,.1);color:var(--w)}
 .geo-city.hot{background:rgba(139,47,201,.12);border:1px solid rgba(139,47,201,.28);color:var(--w)}
 .geo-note{font-size:13px;color:var(--m);line-height:1.7}
+
+/* CTA BAND */
 .cta-band{background:var(--bg);border-bottom:1px solid var(--line);padding:88px 0}
 .cta-band-inner{display:flex;align-items:center;justify-content:space-between;gap:48px}
 .cta-band-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5.5vw,76px);line-height:.92;color:var(--w)}
@@ -142,9 +194,10 @@ ul{list-style:none}
 .contact-line svg{width:15px;height:15px;flex-shrink:0;color:var(--p1)}
 .contact-line a{transition:color .2s}
 .contact-line a:hover{color:var(--w)}
+
+/* FOOTER */
 footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:64px;margin-bottom:52px}
-.footer-logo{margin-bottom:16px}
 .footer-desc{font-size:13px;color:var(--m);line-height:1.82;max-width:290px;margin-bottom:18px}
 .footer-address{font-size:12px;color:var(--m);line-height:1.7;font-style:normal}
 .footer-col-title{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--m2);margin-bottom:20px}
@@ -160,19 +213,24 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 .fci-val a{transition:color .2s}
 .fci-val a:hover{color:var(--w)}
 .footer-bottom{border-top:1px solid var(--line);padding-top:22px;display:flex;align-items:center;justify-content:space-between}
-.footer-copy{font-size:12px;color:var(--m);letter-spacing:.04em}
+.footer-copy{font-size:12px;color:var(--m)}
 .footer-legal{display:flex;gap:24px}
 .footer-legal a{font-family:'Syne',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--m);transition:color .2s}
 .footer-legal a:hover{color:var(--w)}
+
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
 @keyframes tickerMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes scrollPulse{0%,100%{opacity:.4}50%{opacity:1}}
+
 @media(max-width:1024px){
   .hero{grid-template-columns:1fr}
   .hero-img-col{display:none}
   .hero-col{padding:60px 0}
   .hero-scroll{display:none}
+  .about-inner{grid-template-columns:1fr}
+  .about-img{display:none}
   .expertise-grid{grid-template-columns:1fr}
+  .videos-grid{grid-template-columns:1fr}
   .refs-inner{grid-template-columns:1fr;gap:52px}
   .footer-top{grid-template-columns:1fr 1fr;gap:44px}
 }
@@ -193,6 +251,8 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 </style>
 </head>
 <body>
+
+<!-- NAV -->
 <header class="header" id="hdr">
   <div class="wrap nav">
     <a href="/" class="brand" aria-label="Ridgee Production — Accueil">
@@ -218,7 +278,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
         <li><a href="/services.html">Services</a></li>
         <li><a href="/artistes.html">Artistes &amp; Shows</a></li>
         <li><a href="/references.html">Références</a></li>
-        <li><a href="/a-propos.html">À propos</a></li>
       </ul>
     </nav>
     <a href="/contact.html" class="btn btn-border">Contact</a>
@@ -231,39 +290,23 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     <a href="/services.html">Services</a>
     <a href="/artistes.html">Artistes &amp; Shows</a>
     <a href="/references.html">Références</a>
-    <a href="/a-propos.html">À propos</a>
     <a href="/contact.html" class="mobile-cta">Contact</a>
   </div>
 </header>
+
 <main>
+
+<!-- HERO -->
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="hero-col wrap">
-    <div class="hero-badge">
-      <span class="hero-badge-dot"></span>
-      Événementiel &amp; Production Audiovisuelle
-    </div>
-    <h1 class="hero-h1">
-      <em class="grad-txt">CRÉER.</em><br/>
-      PRODUIRE.<br/>
-      MARQUER.
-    </h1>
-    <p class="hero-lead">
-      De la direction artistique d'un show live à la captation et la post-production — Ridgee Production conçoit des expériences qui restent, en France et à l'international.
-    </p>
+    <div class="hero-badge"><span class="hero-badge-dot"></span>Événementiel &amp; Production Audiovisuelle</div>
+    <h1 class="hero-h1"><em class="grad-txt">CRÉER.</em><br/>PRODUIRE.<br/>MARQUER.</h1>
+    <p class="hero-lead">De la direction artistique d'un show live à la captation et la post-production — Ridgee Production conçoit des expériences qui restent, en France et à l'international.</p>
     <div class="hero-kpis">
-      <div class="kpi-box">
-        <div class="kpi-val">50+</div>
-        <div class="kpi-lbl">Artistes gérés</div>
-      </div>
-      <div class="kpi-box">
-        <div class="kpi-val">FR → INT</div>
-        <div class="kpi-lbl">Déploiement</div>
-      </div>
-      <div class="kpi-box">
-        <div class="kpi-val">360°</div>
-        <div class="kpi-lbl">Live &amp; Audiovisuel</div>
-      </div>
+      <div class="kpi-box"><div class="kpi-val">50+</div><div class="kpi-lbl">Artistes gérés</div></div>
+      <div class="kpi-box"><div class="kpi-val">FR → INT</div><div class="kpi-lbl">Déploiement</div></div>
+      <div class="kpi-box"><div class="kpi-val">360°</div><div class="kpi-lbl">Live &amp; Audiovisuel</div></div>
     </div>
     <div class="hero-actions">
       <a href="/contact.html" class="btn btn-fill">Demander un devis</a>
@@ -275,11 +318,10 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     <div class="hero-img-overlay"></div>
     <span class="hero-img-tag">Live Production</span>
   </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span class="scroll-lbl">Découvrir</span>
-  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span class="scroll-lbl">Découvrir</span></div>
 </section>
+
+<!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
     <span class="ticker-item">Production événementielle <span class="ticker-dot"></span></span>
@@ -300,23 +342,39 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     <span class="ticker-item">Color grading <span class="ticker-dot"></span></span>
   </div>
 </div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap">
+    <div class="about-inner">
+      <div class="about-img rv">
+        <img src="/Accueil.jpg" alt="Ridgee Production"/>
+        <span class="about-img-tag">Behind the scenes</span>
+      </div>
+      <div>
+        <p class="eyebrow rv">Notre identité</p>
+        <h2 class="display rv d1">L'IMAGE<br/>AU SERVICE<br/><span class="grad-txt">DE L'IDÉE</span></h2>
+        <p class="body-p rv d2">Ridgee Production œuvre à la croisée de la créativité artistique et de l'exécution technique. Chaque projet est abordé avec la même exigence : trouver le langage visuel juste, au service du message.</p>
+        <p class="body-p rv d3" style="margin-top:18px">De la conception au rendu final, nous accompagnons marques, diffuseurs et agences dans toutes les étapes de leur production — événementielle comme audiovisuelle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
 <section class="expertise">
   <div class="wrap">
     <div class="expertise-intro rv">
       <p class="eyebrow">Ce que nous faisons</p>
       <h2 class="display">DEUX EXPERTISES,<br/><span class="grad-txt">UNE VISION</span></h2>
-      <p class="body-p">Ridgee Production intervient sur deux axes complémentaires : la production d'événements live et le contenu audiovisuel. Un seul interlocuteur pour concevoir, produire et diffuser.</p>
+      <p class="body-p">Un seul interlocuteur pour concevoir, produire et diffuser — en événementiel comme en audiovisuel.</p>
     </div>
     <div class="expertise-grid">
       <div class="pillar rv d1">
         <span class="pillar-ghost">01</span>
-        <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-          <circle cx="9" cy="7" r="4"/>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-        </svg>
+        <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         <h3 class="pillar-title">Production Événementielle</h3>
-        <p class="pillar-desc">De l'idée à la première, nous concevons et produisons des shows, soirées corporate et événements live qui créent de l'émotion. Direction artistique complète, booking d'artistes confirmés, logistique maîtrisée.</p>
+        <p class="pillar-desc">De l'idée à la première — shows, soirées corporate, événements live. Direction artistique complète, booking d'artistes confirmés, logistique maîtrisée.</p>
         <ul class="pillar-list">
           <li>Direction artistique &amp; scénographie</li>
           <li>Booking &amp; management d'artistes</li>
@@ -327,12 +385,9 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
       </div>
       <div class="pillar rv d2">
         <span class="pillar-ghost">02</span>
-        <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-          <rect x="2" y="7" width="20" height="15" rx="1"/>
-          <polyline points="17 2 12 7 7 2"/>
-        </svg>
+        <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="7" width="20" height="15" rx="1"/><polyline points="17 2 12 7 7 2"/></svg>
         <h3 class="pillar-title">Production Audiovisuelle</h3>
-        <p class="pillar-desc">Captation, réalisation et post-production de vos contenus. Clips, documentaires, captations live, émissions — nous traduisons visuellement chaque projet avec exigence et créativité.</p>
+        <p class="pillar-desc">Captation, réalisation et post-production. Clips, documentaires, émissions — nous traduisons visuellement chaque projet avec exigence et créativité.</p>
         <ul class="pillar-list">
           <li>Captation multi-caméras &amp; régie live</li>
           <li>Réalisation de clips &amp; contenus de marque</li>
@@ -344,6 +399,69 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </section>
+
+<!-- VIDEOS -->
+<section class="videos">
+  <div class="wrap">
+    <div class="videos-hd rv">
+      <p class="eyebrow">Nos réalisations</p>
+      <h2 class="display">LE TRAVAIL<br/><span class="grad-txt">PARLE</span></h2>
+    </div>
+    <div class="videos-grid rv d1">
+
+      <div class="video-item" onclick="openModal('/Lova.mp4')">
+        <video src="/Lova.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="video-overlay"></div>
+        <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        <div class="video-info">
+          <div class="video-tag">Performance Live</div>
+          <div class="video-title">Lova Ladiva — Show</div>
+        </div>
+      </div>
+
+      <div class="video-item" onclick="openModal('/perf_limelight_rose_lova.mp4')">
+        <video src="/perf_limelight_rose_lova.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="video-overlay"></div>
+        <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        <div class="video-info">
+          <div class="video-tag">Captation Live</div>
+          <div class="video-title">Limelight Rose — Lova</div>
+        </div>
+      </div>
+
+      <div class="video-item" onclick="openModal('/MissTik.mp4')">
+        <video src="/MissTik.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="video-overlay"></div>
+        <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        <div class="video-info">
+          <div class="video-tag">Performance</div>
+          <div class="video-title">MissTik — Show</div>
+        </div>
+      </div>
+
+      <div class="video-item" onclick="openModal('/Izera.mp4')">
+        <video src="/Izera.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="video-overlay"></div>
+        <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        <div class="video-info">
+          <div class="video-tag">Production</div>
+          <div class="video-title">Izera — Captation</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal(event)">
+  <div class="modal-inner">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <video id="modalVideo" controls playsinline style="width:100%;border-radius:2px"></video>
+  </div>
+</div>
+
+<!-- SERVICES -->
 <section class="services">
   <div class="wrap">
     <div class="services-hd">
@@ -351,55 +469,57 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
         <p class="eyebrow">Nos services</p>
         <h2 class="display" style="margin-bottom:0">TOUT<br/>LE SPECTRE</h2>
       </div>
-      <p class="body-p rv d2" style="text-align:right">Du brief créatif au rendu final — chaque projet est traité avec la même exigence, qu'il s'agisse d'un événement corporate ou d'une production audiovisuelle.</p>
+      <p class="body-p rv d2" style="text-align:right">Du brief créatif au rendu final — événement corporate ou production audiovisuelle, même exigence.</p>
     </div>
     <div class="services-grid rv d1">
       <div class="svc">
         <div class="svc-num">01</div>
         <svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <div class="svc-name">Direction artistique</div>
-        <p class="svc-desc">Concept, ligne créative, scénographie et casting. Nous définissons l'ADN visuel et artistique de chaque production, du brief à la première.</p>
+        <p class="svc-desc">Concept, ligne créative, scénographie et casting. Du brief à la première.</p>
       </div>
       <div class="svc">
         <div class="svc-num">02</div>
         <svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         <div class="svc-name">Booking &amp; Management</div>
-        <p class="svc-desc">Sourcing, négociation, logistique et coordination artistique. Réseau d'artistes confirmés en France et à l'international.</p>
+        <p class="svc-desc">Sourcing, négociation, logistique et coordination artistique. Réseau confirmé FR &amp; INT.</p>
       </div>
       <div class="svc">
         <div class="svc-num">03</div>
         <svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         <div class="svc-name">Événementiel Corporate</div>
-        <p class="svc-desc">Soirées d'entreprise, lancements de produit, conventions — des formats impactants pensés pour votre image et vos objectifs.</p>
+        <p class="svc-desc">Soirées d'entreprise, lancements, conventions — formats impactants sur-mesure.</p>
       </div>
       <div class="svc">
         <div class="svc-num">04</div>
         <svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polyline points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
         <div class="svc-name">Captation &amp; Réalisation</div>
-        <p class="svc-desc">Tournage professionnel, régie multi-caméras, diffusion live. De l'émission de plateau au reportage de terrain.</p>
+        <p class="svc-desc">Tournage professionnel, régie multi-caméras, diffusion live.</p>
       </div>
       <div class="svc">
         <div class="svc-num">05</div>
         <svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         <div class="svc-name">Post-Production</div>
-        <p class="svc-desc">Montage, étalonnage colorimétrique, mixage audio et habillage graphique. Rendu final à la hauteur de l'ambition créative.</p>
+        <p class="svc-desc">Montage, étalonnage, mixage audio et habillage graphique.</p>
       </div>
       <div class="svc">
         <div class="svc-num">06</div>
         <svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         <div class="svc-name">Contenu de Marque</div>
-        <p class="svc-desc">Clips, publicités, documentaires corporate — du contenu qui parle pour votre marque avec l'impact visuel qu'elle mérite.</p>
+        <p class="svc-desc">Clips, publicités, documentaires corporate — l'impact visuel que votre marque mérite.</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- REFS -->
 <section class="refs">
   <div class="wrap">
     <div class="refs-inner">
       <div>
         <p class="eyebrow rv">Références</p>
         <h2 class="display rv d1">EN UN<br/>COUP D'ŒIL</h2>
-        <p class="body-p rv d2">Des collaborations confirmées avec des artistes et structures reconnus, en France et en Europe.</p>
+        <p class="body-p rv d2">Des collaborations confirmées en France et en Europe — chaque projet porte la signature Ridgee.</p>
         <div class="refs-highlights">
           <div class="ref-item rv d2">
             <div class="ref-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>
@@ -413,6 +533,10 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
             <div class="ref-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
             <div><div class="ref-title">Réseau international confirmé</div><div class="ref-sub">DragCon UK · Vilnius · Londres · New York · Paris · Toulouse</div></div>
           </div>
+        </div>
+        <div class="clients-logo-row rv d4">
+          <span class="clients-logo-label">Partenaires</span>
+          <img class="clients-logo-img" src="/Logos-prestas.png" alt="Partenaires Ridgee Production"/>
         </div>
       </div>
       <div class="rv d3">
@@ -436,6 +560,8 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </section>
+
+<!-- CTA -->
 <section class="cta-band">
   <div class="wrap">
     <div class="cta-band-inner rv">
@@ -459,12 +585,15 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </section>
+
 </main>
+
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">
+        <div style="margin-bottom:16px">
           <svg width="72" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs><linearGradient id="gFt" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#8B2FC9"/><stop offset="48%" stop-color="#C4256E"/><stop offset="100%" stop-color="#FF6B2B"/></linearGradient></defs>
             <path d="M13 14 L13 95 L31 95 L31 66 L57 95 L79 95 L51 63 C69 57 79 45 79 31 C79 17 67 14 51 14 Z M31 29 L49 29 C57 29 63 34 63 41 C63 48 57 53 49 53 L31 53 Z" fill="url(#gFt)"/>
@@ -481,7 +610,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
           <a href="/services.html">Services</a>
           <a href="/artistes.html">Artistes &amp; Shows</a>
           <a href="/references.html">Références</a>
-          <a href="/a-propos.html">À propos</a>
           <a href="/contact.html">Contact</a>
         </nav>
       </div>
@@ -500,9 +628,13 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </footer>
+
 <script>
+  // Nav scroll
   const hdr=document.getElementById('hdr');
   window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40),{passive:true});
+
+  // Burger
   const burger=document.getElementById('burger'),menu=document.getElementById('mobileNav');
   burger.addEventListener('click',()=>{
     const o=menu.classList.toggle('open');
@@ -513,10 +645,38 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     menu.classList.remove('open');burger.classList.remove('open');
     burger.setAttribute('aria-expanded',false);
   }));
-  const io=new IntersectionObserver(entries=>entries.forEach(e=>{
-    if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}
+
+  // Reveal
+  const io=new IntersectionObserver(e=>e.forEach(el=>{
+    if(el.isIntersecting){el.target.classList.add('on');io.unobserve(el.target)}
   }),{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  // Video hover preview
+  document.querySelectorAll('.video-item').forEach(item=>{
+    const v=item.querySelector('video');
+    item.addEventListener('mouseenter',()=>v.play());
+    item.addEventListener('mouseleave',()=>{v.pause();v.currentTime=0});
+  });
+
+  // Modal
+  function openModal(src){
+    const modal=document.getElementById('modal');
+    const vid=document.getElementById('modalVideo');
+    vid.src=src;
+    modal.classList.add('open');
+    vid.play();
+    document.body.style.overflow='hidden';
+  }
+  function closeModal(e){
+    if(e&&e.target!==document.getElementById('modal')&&!e.target.classList.contains('modal-close'))return;
+    const modal=document.getElementById('modal');
+    const vid=document.getElementById('modalVideo');
+    vid.pause();vid.src='';
+    modal.classList.remove('open');
+    document.body.style.overflow='';
+  }
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal({target:document.getElementById('modal')})});
 </script>
 </body>
 </html>
