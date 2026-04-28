@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>À propos — Ridgee Production</title>
-  <meta name="description" content="Sabri, fondateur de Ridgee Production. Producteur audiovisuel, 11 ans de théâtre d'improvisation, 15 ans d'expérience commerciale et entrepreneuriale."/>
+  <meta name="description" content="Sabri, fondateur de Ridgee Production. Producteur audiovisuel, 11 ans de théâtre d'improvisation, 15 ans d'expérience commerciale."/>
   <link rel="icon" href="/logo-r-couleur.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -38,13 +38,10 @@ ul{list-style:none}
 .rv{opacity:0;transform:translateY(38px);transition:opacity .75s ease,transform .75s ease}
 .rv.on{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
-
-/* NAV */
 .header{position:fixed;top:0;left:0;right:0;z-index:500;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
 .header.scrolled{background:rgba(8,8,8,.92);backdrop-filter:blur(24px);border-color:var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{display:flex;align-items:center;gap:13px;flex-shrink:0}
-.brand-svg{height:42px;width:auto;flex-shrink:0}
 .brand-text{display:flex;flex-direction:column;line-height:1}
 .brand-name{font-family:'Bebas Neue',sans-serif;font-size:23px;letter-spacing:.07em;color:var(--w)}
 .brand-tag{font-family:'Syne',sans-serif;font-size:8.5px;font-weight:700;letter-spacing:.42em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -63,8 +60,6 @@ ul{list-style:none}
 .mobile-nav a{font-family:'Syne',sans-serif;font-size:14px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--m2);padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
 .mobile-nav a:hover{color:var(--w)}
 .mobile-nav .mobile-cta{border:none;margin-top:16px;background:var(--grad);color:var(--w);padding:14px 24px;text-align:center;border-radius:2px}
-
-/* HERO PORTRAIT */
 .portrait-hero{min-height:100vh;padding-top:74px;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
 .portrait-hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 70% at 65% 60%,rgba(139,47,201,.2) 0%,transparent 65%),radial-gradient(ellipse 35% 45% at 20% 80%,rgba(255,107,43,.08) 0%,transparent 55%)}
 .portrait-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:68px 68px;mask-image:radial-gradient(ellipse 70% 70% at 30% 50%,black,transparent 70%)}
@@ -79,8 +74,6 @@ ul{list-style:none}
 .portrait-img-col{position:relative;overflow:hidden;min-height:600px}
 .portrait-img-col img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center}
 .portrait-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,transparent 25%),linear-gradient(to top,var(--bg) 0%,transparent 20%)}
-
-/* HISTOIRE */
 .story{padding:130px 0;background:var(--bg2);border-bottom:1px solid var(--line)}
 .story-inner{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start}
 .story-quote{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,44px);line-height:1.1;color:var(--w);border-left:3px solid;border-image:var(--grad) 1;padding-left:28px;margin-bottom:36px}
@@ -95,15 +88,11 @@ ul{list-style:none}
 .tl-date{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--p1);margin-bottom:4px}
 .tl-event{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--w);margin-bottom:3px}
 .tl-sub{font-size:13px;color:var(--m);line-height:1.6}
-
-/* CHIFFRES */
 .chiffres{padding:100px 0;background:var(--bg);border-bottom:1px solid var(--line)}
 .chiffres-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px}
 .chiffre-box{background:var(--bg);padding:44px 32px;text-align:center}
 .chiffre-val{font-family:'Bebas Neue',sans-serif;font-size:72px;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .chiffre-lbl{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--m);margin-top:10px}
-
-/* VALEURS */
 .valeurs{padding:130px 0;background:var(--bg2);border-bottom:1px solid var(--line)}
 .valeurs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line);margin-top:64px}
 .valeur-card{background:var(--bg2);padding:48px 40px;position:relative;overflow:hidden;transition:background .35s}
@@ -114,8 +103,6 @@ ul{list-style:none}
 .valeur-card:hover .valeur-ico{color:var(--p1)}
 .valeur-name{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;color:var(--w);margin-bottom:12px}
 .valeur-desc{font-size:14px;color:var(--m);line-height:1.8}
-
-/* FORMATION */
 .formation{padding:100px 0;background:var(--bg);border-bottom:1px solid var(--line)}
 .formation-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:56px}
 .formation-card{background:var(--bg2);border:1px solid var(--line);padding:40px;position:relative;overflow:hidden;transition:border-color .3s}
@@ -125,8 +112,6 @@ ul{list-style:none}
 .formation-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--w);margin-bottom:6px}
 .formation-school{font-family:'Syne',sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--m);margin-bottom:16px}
 .formation-desc{font-size:13.5px;color:var(--m);line-height:1.75}
-
-/* CTA */
 .cta-band{background:var(--bg2);border-top:1px solid var(--line);padding:88px 0}
 .cta-band-inner{display:flex;align-items:center;justify-content:space-between;gap:48px}
 .cta-band-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5.5vw,76px);line-height:.92;color:var(--w)}
@@ -136,8 +121,6 @@ ul{list-style:none}
 .contact-line svg{width:15px;height:15px;flex-shrink:0;color:var(--p1)}
 .contact-line a{transition:color .2s}
 .contact-line a:hover{color:var(--w)}
-
-/* FOOTER */
 footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:64px;margin-bottom:52px}
 .footer-desc{font-size:13px;color:var(--m);line-height:1.82;max-width:290px;margin-bottom:18px}
@@ -158,7 +141,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 .footer-legal{display:flex;gap:24px}
 .footer-legal a{font-family:'Syne',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--m);transition:color .2s}
 .footer-legal a:hover{color:var(--w)}
-
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
 @media(max-width:1024px){
   .portrait-hero{grid-template-columns:1fr}
@@ -182,17 +164,14 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 </style>
 </head>
 <body>
-
-<!-- NAV -->
 <header class="header" id="hdr">
   <div class="wrap nav">
     <a href="/" class="brand">
-      <svg class="brand-svg" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="gNav" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#8B2FC9"/><stop offset="48%" stop-color="#C4256E"/><stop offset="100%" stop-color="#FF6B2B"/></linearGradient></defs>
-        <path d="M13 14 L13 95 L31 95 L31 66 L57 95 L79 95 L51 63 C69 57 79 45 79 31 C79 17 67 14 51 14 Z M31 29 L49 29 C57 29 63 34 63 41 C63 48 57 53 49 53 L31 53 Z" fill="url(#gNav)"/>
-        <polygon points="13,14 39,14 13,42" fill="#080808"/>
-      </svg>
-      <div class="brand-text"><div class="brand-name">RIDGEE</div><div class="brand-tag">Production</div></div>
+      <img src="/logo-r-couleur.png" style="height:42px;width:auto;" alt="Ridgee Production"/>
+      <div class="brand-text">
+        <div class="brand-name">RIDGEE</div>
+        <div class="brand-tag">Production</div>
+      </div>
     </a>
     <nav>
       <ul class="nav-links">
@@ -215,10 +194,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     <a href="/contact.html" class="mobile-cta">Contact</a>
   </div>
 </header>
-
 <main>
-
-<!-- HERO -->
 <section class="portrait-hero">
   <div class="portrait-grid"></div>
   <div class="portrait-col wrap">
@@ -238,8 +214,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     <div class="portrait-img-overlay"></div>
   </div>
 </section>
-
-<!-- HISTOIRE -->
 <section class="story">
   <div class="wrap">
     <div class="story-inner">
@@ -257,14 +231,13 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
         </div>
       </div>
     </div>
-
     <div class="rv d2" style="margin-top:80px">
       <div class="tl-title">Parcours clé</div>
       <div class="tl-items">
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div>
-            <div class="tl-date">2002 — 2013 · 11 ans</div>
+            <div class="tl-date">2005 — 2016 · 11 ans</div>
             <div class="tl-event">Comédien improvisateur</div>
             <div class="tl-sub">Théâtre de la Croix Blanche — Albi. Pratique intensive de l'improvisation théâtrale, développement de la présence scénique et de la créativité collective.</div>
           </div>
@@ -272,7 +245,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div>
-            <div class="tl-date">2012 — 2013</div>
+            <div class="tl-date">2012 — 2016</div>
             <div class="tl-event">Vente de spectacles vivants</div>
             <div class="tl-sub">SARL Arena Production — Le Cirque Medrano, Le Grand Cirque de Saint-Pétersbourg, La Magie de Las Vegas. Première immersion dans le monde du spectacle professionnel.</div>
           </div>
@@ -280,7 +253,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div>
-            <div class="tl-date">2013 — 2025 · 12 ans</div>
+            <div class="tl-date">2016 — 2025 · 12 ans</div>
             <div class="tl-event">Expertise commerciale &amp; management</div>
             <div class="tl-sub">Sales Trainer, Business Developer, Sales Account Manager, Sales Manager Adjoint — chez Solocal, local.fr, Aviv Group. 143% de l'objectif atteint en 2024 en tant que manager.</div>
           </div>
@@ -305,8 +278,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </section>
-
-<!-- CHIFFRES -->
 <section class="chiffres">
   <div class="wrap">
     <div class="rv">
@@ -321,8 +292,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </section>
-
-<!-- VALEURS -->
 <section class="valeurs">
   <div class="wrap">
     <div class="rv">
@@ -348,8 +317,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </section>
-
-<!-- FORMATION -->
 <section class="formation">
   <div class="wrap">
     <div class="rv">
@@ -364,7 +331,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
         <p class="formation-desc">Formation spécialisée en production de formats TV — flux, divertissement, émissions de plateau. Stratégie &amp; production de formats audiovisuels, de la conception à la diffusion.</p>
       </div>
       <div class="formation-card rv d2">
-        <div class="formation-year">2002 — 2013 · 11 ans</div>
+        <div class="formation-year">2005 — 2016 · 11 ans</div>
         <div class="formation-title">Théâtre d'improvisation</div>
         <div class="formation-school">Théâtre de la Croix Blanche — Albi</div>
         <p class="formation-desc">Pratique intensive du théâtre d'improvisation pendant 11 ans. Développement de la créativité, de la présence scénique, de l'écoute et de la réactivité artistique.</p>
@@ -372,8 +339,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </section>
-
-<!-- CTA -->
 <section class="cta-band">
   <div class="wrap">
     <div class="cta-band-inner rv">
@@ -397,20 +362,13 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </section>
-
 </main>
-
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-top">
       <div>
         <div style="margin-bottom:16px">
-          <svg width="72" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="gFt" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#8B2FC9"/><stop offset="48%" stop-color="#C4256E"/><stop offset="100%" stop-color="#FF6B2B"/></linearGradient></defs>
-            <path d="M13 14 L13 95 L31 95 L31 66 L57 95 L79 95 L51 63 C69 57 79 45 79 31 C79 17 67 14 51 14 Z M31 29 L49 29 C57 29 63 34 63 41 C63 48 57 53 49 53 L31 53 Z" fill="url(#gFt)"/>
-            <polygon points="13,14 39,14 13,42" fill="#080808"/>
-          </svg>
+          <img src="/logo-ridgee-blanc.png" style="height:60px;width:auto;" alt="Ridgee Production"/>
         </div>
         <p class="footer-desc">Production d'événements et production audiovisuelle — de la direction artistique au rendu final, en France et à l'international.</p>
       </div>
@@ -440,7 +398,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </footer>
-
 <script>
   const hdr=document.getElementById('hdr');
   window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40),{passive:true});
