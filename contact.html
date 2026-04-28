@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Contact — Ridgee Production</title>
-  <meta name="description" content="Contactez Ridgee Production pour vos projets événementiels et audiovisuels. Paris, France &amp; International."/>
+  <meta name="description" content="Contactez Ridgee Production pour vos projets événementiels et audiovisuels. France &amp; International."/>
   <link rel="icon" href="/logo-r-couleur.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -36,13 +36,10 @@ ul{list-style:none}
 .rv{opacity:0;transform:translateY(38px);transition:opacity .75s ease,transform .75s ease}
 .rv.on{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
-
-/* NAV */
 .header{position:fixed;top:0;left:0;right:0;z-index:500;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
 .header.scrolled{background:rgba(8,8,8,.92);backdrop-filter:blur(24px);border-color:var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{display:flex;align-items:center;gap:13px;flex-shrink:0}
-.brand-svg{height:42px;width:auto;flex-shrink:0}
 .brand-text{display:flex;flex-direction:column;line-height:1}
 .brand-name{font-family:'Bebas Neue',sans-serif;font-size:23px;letter-spacing:.07em;color:var(--w)}
 .brand-tag{font-family:'Syne',sans-serif;font-size:8.5px;font-weight:700;letter-spacing:.42em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -61,8 +58,6 @@ ul{list-style:none}
 .mobile-nav a{font-family:'Syne',sans-serif;font-size:14px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--m2);padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
 .mobile-nav a:hover{color:var(--w)}
 .mobile-nav .mobile-cta{border:none;margin-top:16px;background:var(--grad);color:var(--w);padding:14px 24px;text-align:center;border-radius:2px}
-
-/* PAGE HERO */
 .page-hero{padding:160px 0 100px;background:var(--bg);position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
 .page-hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(139,47,201,.18) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 20% 80%,rgba(255,107,43,.08) 0%,transparent 60%)}
 .page-hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:68px 68px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent 75%)}
@@ -71,74 +66,37 @@ ul{list-style:none}
 .page-hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--grad135);flex-shrink:0}
 .page-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,10vw,150px);line-height:.87;letter-spacing:.025em;color:var(--w);margin-bottom:24px}
 .page-hero-sub{font-size:16px;color:var(--m2);line-height:1.8;max-width:520px}
-
-/* CONTACT SECTION */
 .contact-section{padding:120px 0;background:var(--bg2)}
 .contact-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:88px;align-items:start}
-
-/* INFO */
-.contact-info{}
-.info-block{display:flex;flex-direction:column;gap:0;margin-top:40px}
 .info-item{display:flex;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
 .info-item:first-child{border-top:1px solid var(--line)}
 .info-ico{width:44px;height:44px;flex-shrink:0;background:rgba(139,47,201,.1);border:1px solid rgba(139,47,201,.22);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--p1)}
-.info-body{}
 .info-label{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--m);margin-bottom:5px}
 .info-val{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--w)}
 .info-val a{transition:color .2s}
 .info-val a:hover{color:var(--p1)}
-
-/* FORM */
-.contact-form{}
 .form-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4vw,56px);line-height:.95;color:var(--w);margin-bottom:36px}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
 .form-group{display:flex;flex-direction:column;gap:8px}
 .form-group.full{grid-column:span 2}
 .form-label{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--m)}
-.form-input,.form-select,.form-textarea{
-  background:rgba(255,255,255,.04);
-  border:1px solid var(--line);
-  color:var(--w);padding:14px 18px;
-  font-family:'DM Sans',sans-serif;font-size:14px;
-  border-radius:2px;outline:none;
-  transition:border-color .25s,background .25s;
-  width:100%;
-}
-.form-input:focus,.form-select:focus,.form-textarea:focus{
-  border-color:rgba(196,37,110,.5);
-  background:rgba(255,255,255,.06);
-}
+.form-input,.form-select,.form-textarea{background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--w);padding:14px 18px;font-family:'DM Sans',sans-serif;font-size:14px;border-radius:2px;outline:none;transition:border-color .25s,background .25s;width:100%}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:rgba(196,37,110,.5);background:rgba(255,255,255,.06)}
 .form-input::placeholder,.form-textarea::placeholder{color:var(--m)}
 .form-select{appearance:none;cursor:pointer}
 option{background:#1a1a1a}
 .form-textarea{resize:vertical;min-height:140px}
-.form-submit{
-  margin-top:8px;
-  font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
-  background:var(--grad);color:var(--w);
-  padding:16px 40px;border:none;border-radius:2px;cursor:pointer;
-  transition:opacity .25s,transform .25s;
-  width:100%;
-}
+.form-submit{margin-top:8px;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;background:var(--grad);color:var(--w);padding:16px 40px;border:none;border-radius:2px;cursor:pointer;transition:opacity .25s,transform .25s;width:100%}
 .form-submit:hover{opacity:.85;transform:translateY(-2px)}
 .form-note{font-size:12px;color:var(--m);margin-top:12px;text-align:center}
-
-/* SUCCESS */
-.form-success{
-  display:none;
-  background:rgba(139,47,201,.1);border:1px solid rgba(139,47,201,.3);
-  border-radius:4px;padding:32px;text-align:center;margin-top:16px;
-}
+.form-success{display:none;background:rgba(139,47,201,.1);border:1px solid rgba(139,47,201,.3);border-radius:4px;padding:32px;text-align:center;margin-top:16px}
 .form-success.show{display:block}
 .form-success-icon{font-size:40px;margin-bottom:12px}
 .form-success-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--w);margin-bottom:8px}
 .form-success-sub{font-size:14px;color:var(--m)}
-
-/* FOOTER */
 footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:64px;margin-bottom:52px}
 .footer-desc{font-size:13px;color:var(--m);line-height:1.82;max-width:290px;margin-bottom:18px}
-.footer-address{font-size:12px;color:var(--m);line-height:1.7;font-style:normal}
 .footer-col-title{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--m2);margin-bottom:20px}
 .footer-nav{display:flex;flex-direction:column;gap:10px}
 .footer-nav a{font-size:13px;color:var(--m);display:flex;align-items:center;gap:9px;transition:color .2s}
@@ -156,7 +114,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 .footer-legal{display:flex;gap:24px}
 .footer-legal a{font-family:'Syne',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--m);transition:color .2s}
 .footer-legal a:hover{color:var(--w)}
-
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
 @media(max-width:1024px){
   .contact-inner{grid-template-columns:1fr;gap:56px}
   .footer-top{grid-template-columns:1fr 1fr;gap:44px}
@@ -173,24 +131,22 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 </style>
 </head>
 <body>
-
-<!-- NAV -->
 <header class="header" id="hdr">
   <div class="wrap nav">
     <a href="/" class="brand">
-      <svg class="brand-svg" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="gNav" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#8B2FC9"/><stop offset="48%" stop-color="#C4256E"/><stop offset="100%" stop-color="#FF6B2B"/></linearGradient></defs>
-        <path d="M13 14 L13 95 L31 95 L31 66 L57 95 L79 95 L51 63 C69 57 79 45 79 31 C79 17 67 14 51 14 Z M31 29 L49 29 C57 29 63 34 63 41 C63 48 57 53 49 53 L31 53 Z" fill="url(#gNav)"/>
-        <polygon points="13,14 39,14 13,42" fill="#080808"/>
-      </svg>
-      <div class="brand-text"><div class="brand-name">RIDGEE</div><div class="brand-tag">Production</div></div>
+      <img src="/logo-r-couleur.png" style="height:42px;width:auto;" alt="Ridgee Production"/>
+      <div class="brand-text">
+        <div class="brand-name">RIDGEE</div>
+        <div class="brand-tag">Production</div>
+      </div>
     </a>
     <nav>
       <ul class="nav-links">
         <li><a href="/">Accueil</a></li>
         <li><a href="/services.html">Services</a></li>
         <li><a href="/artistes.html">Artistes &amp; Shows</a></li>
-        <li><a href="/references.html">Références</a></li>         <li><a href="/a-propos.html">À propos</a></li>
+        <li><a href="/references.html">Références</a></li>
+        <li><a href="/a-propos.html">À propos</a></li>
       </ul>
     </nav>
     <a href="/contact.html" class="btn btn-border" style="border-color:rgba(196,37,110,.5);color:var(--w)">Contact</a>
@@ -201,72 +157,40 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     <a href="/services.html">Services</a>
     <a href="/artistes.html">Artistes &amp; Shows</a>
     <a href="/references.html">Références</a>
+    <a href="/a-propos.html">À propos</a>
     <a href="/contact.html" class="mobile-cta">Contact</a>
   </div>
 </header>
-
 <main>
-
-<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="page-hero-grid"></div>
   <div class="wrap page-hero-content">
     <div class="page-hero-badge"><span class="page-hero-badge-dot"></span>Parlons-nous</div>
     <h1><span class="grad-txt">CONTACT</span></h1>
-    <p class="page-hero-sub">Un projet événementiel, une production audiovisuelle, un booking d'artiste — on est là. Réponse sous 24h.</p>
+    <p class="page-hero-sub">Un projet événementiel, une production audiovisuelle, un booking — on est là. Réponse sous 24h.</p>
   </div>
 </section>
-
-<!-- CONTACT -->
 <section class="contact-section">
   <div class="wrap">
     <div class="contact-inner">
-
-      <!-- INFO -->
       <div class="rv">
         <p class="eyebrow">Nous joindre</p>
         <h2 class="display">ON EST<br/><span class="grad-txt">DISPONIBLES</span></h2>
-        <div class="info-block">
+        <div>
           <div class="info-item">
-            <div class="info-ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            <div class="info-body">
-              <div class="info-label">Téléphone</div>
-              <div class="info-val"><a href="tel:+33610472999">+33 6 10 47 29 99</a></div>
-            </div>
+            <div class="info-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><div class="info-label">Téléphone</div><div class="info-val"><a href="tel:+33610472999">+33 6 10 47 29 99</a></div></div>
           </div>
           <div class="info-item">
-            <div class="info-ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div class="info-body">
-              <div class="info-label">Email</div>
-              <div class="info-val"><a href="mailto:contact@ridgeeproduction.com">contact@ridgeeproduction.com</a></div>
-            </div>
+            <div class="info-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="info-label">Email</div><div class="info-val"><a href="mailto:contact@ridgeeproduction.com">contact@ridgeeproduction.com</a></div></div>
           </div>
           <div class="info-item">
-            <div class="info-ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="info-body">
-              <div class="info-label">Adresse</div>
-              <div class="info-val" style="font-size:15px">13 rue Pierre Mauroy<br/>75018 Paris, France</div>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="info-ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <div class="info-body">
-              <div class="info-label">Déploiement</div>
-              <div class="info-val" style="font-size:15px">France &amp; International<br/><span style="font-size:12px;font-family:'Syne',sans-serif;letter-spacing:.15em;color:var(--m)">FR · UK · LT · ES · IT · PT · US</span></div>
-            </div>
+            <div class="info-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div><div class="info-label">Déploiement</div><div class="info-val" style="font-size:15px">France &amp; International<br/><span style="font-size:12px;font-family:'Syne',sans-serif;letter-spacing:.15em;color:var(--m)">FR · UK · LT · ES · IT · PT · US</span></div></div>
           </div>
         </div>
       </div>
-
-      <!-- FORM -->
       <div class="rv d2">
         <div class="form-title">VOTRE<br/><span class="grad-txt">PROJET</span></div>
         <form id="contactForm" onsubmit="handleSubmit(event)">
@@ -313,27 +237,18 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
           <div class="form-success-sub">Nous vous répondrons dans les 24h. À très vite !</div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 </main>
-
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-top">
       <div>
         <div style="margin-bottom:16px">
-          <svg width="72" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="gFt" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#8B2FC9"/><stop offset="48%" stop-color="#C4256E"/><stop offset="100%" stop-color="#FF6B2B"/></linearGradient></defs>
-            <path d="M13 14 L13 95 L31 95 L31 66 L57 95 L79 95 L51 63 C69 57 79 45 79 31 C79 17 67 14 51 14 Z M31 29 L49 29 C57 29 63 34 63 41 C63 48 57 53 49 53 L31 53 Z" fill="url(#gFt)"/>
-            <polygon points="13,14 39,14 13,42" fill="#080808"/>
-          </svg>
+          <img src="/logo-ridgee-blanc.png" style="height:60px;width:auto;" alt="Ridgee Production"/>
         </div>
-        <p class="footer-desc">Production d'événements et production audiovisuelle — de la direction artistique au rendu final.</p>
-        <address class="footer-address">13 rue Pierre Mauroy<br/>75018 Paris, France</address>
+        <p class="footer-desc">Production d'événements et production audiovisuelle — de la direction artistique au rendu final, en France et à l'international.</p>
       </div>
       <div>
         <div class="footer-col-title">Navigation</div>
@@ -342,6 +257,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
           <a href="/services.html">Services</a>
           <a href="/artistes.html">Artistes &amp; Shows</a>
           <a href="/references.html">Références</a>
+          <a href="/a-propos.html">À propos</a>
           <a href="/contact.html">Contact</a>
         </nav>
       </div>
@@ -360,7 +276,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </footer>
-
 <script>
   const hdr=document.getElementById('hdr');
   window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40),{passive:true});
@@ -369,23 +284,15 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
   const io=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('on');io.unobserve(el.target)}}),{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-
   function handleSubmit(e){
     e.preventDefault();
     const form=document.getElementById('contactForm');
-    const success=document.getElementById('formSuccess');
-    // Encode form data for Formspree or mailto fallback
     const data=new FormData(form);
-    const params=new URLSearchParams();
-    data.forEach((v,k)=>params.append(k,v));
-    // Open mailto as fallback
     const subject=encodeURIComponent('Nouveau projet — Ridgee Production');
-    const body=encodeURIComponent(
-      `Prénom: ${data.get('prenom')}\nNom: ${data.get('nom')}\nEmail: ${data.get('email')}\nTél: ${data.get('tel')}\nProjet: ${data.get('sujet')}\n\nMessage:\n${data.get('message')}`
-    );
+    const body=encodeURIComponent(`Prénom: ${data.get('prenom')}\nNom: ${data.get('nom')}\nEmail: ${data.get('email')}\nTél: ${data.get('tel')}\nProjet: ${data.get('sujet')}\n\nMessage:\n${data.get('message')}`);
     window.location.href=`mailto:contact@ridgeeproduction.com?subject=${subject}&body=${body}`;
     form.style.display='none';
-    success.classList.add('show');
+    document.getElementById('formSuccess').classList.add('show');
   }
 </script>
 </body>
