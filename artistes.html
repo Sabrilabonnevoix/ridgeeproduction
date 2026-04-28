@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Artistes &amp; Shows — Ridgee Production</title>
-  <meta name="description" content="Découvrez nos artistes et shows — drag queens, performers, entertainers. Booking France &amp; International."/>
+  <meta name="description" content="Découvrez nos shows et performances live. Booking France &amp; International."/>
   <link rel="icon" href="/logo-r-couleur.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -38,13 +38,10 @@ ul{list-style:none}
 .rv{opacity:0;transform:translateY(38px);transition:opacity .75s ease,transform .75s ease}
 .rv.on{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
-
-/* NAV */
 .header{position:fixed;top:0;left:0;right:0;z-index:500;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
 .header.scrolled{background:rgba(8,8,8,.92);backdrop-filter:blur(24px);border-color:var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{display:flex;align-items:center;gap:13px;flex-shrink:0}
-.brand-svg{height:42px;width:auto;flex-shrink:0}
 .brand-text{display:flex;flex-direction:column;line-height:1}
 .brand-name{font-family:'Bebas Neue',sans-serif;font-size:23px;letter-spacing:.07em;color:var(--w)}
 .brand-tag{font-family:'Syne',sans-serif;font-size:8.5px;font-weight:700;letter-spacing:.42em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -63,8 +60,6 @@ ul{list-style:none}
 .mobile-nav a{font-family:'Syne',sans-serif;font-size:14px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--m2);padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
 .mobile-nav a:hover{color:var(--w)}
 .mobile-nav .mobile-cta{border:none;margin-top:16px;background:var(--grad);color:var(--w);padding:14px 24px;text-align:center;border-radius:2px}
-
-/* PAGE HERO */
 .page-hero{padding:160px 0 100px;background:var(--bg);position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
 .page-hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(196,37,110,.2) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 20% 80%,rgba(139,47,201,.1) 0%,transparent 60%)}
 .page-hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:68px 68px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent 75%)}
@@ -73,87 +68,14 @@ ul{list-style:none}
 .page-hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--grad135);flex-shrink:0}
 .page-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,10vw,150px);line-height:.87;letter-spacing:.025em;color:var(--w);margin-bottom:24px}
 .page-hero-sub{font-size:16px;color:var(--m2);line-height:1.8;max-width:520px}
-
-/* SHOW HERO VISUEL */
-.show-visual{
-  background:var(--bg2);
-  border-bottom:1px solid var(--line);
-  padding:0;
-  position:relative;overflow:hidden;
-  height:70vh;min-height:500px;
-}
-.show-visual img{
-  width:100%;height:100%;
-  object-fit:cover;object-position:center top;
-  display:block;
-}
-.show-visual-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to top,var(--bg) 0%,rgba(8,8,8,.4) 50%,transparent 100%);
-}
-.show-visual-caption{
-  position:absolute;bottom:48px;left:0;right:0;
-  z-index:2;
-}
-.show-caption-inner{
-  display:flex;align-items:flex-end;justify-content:space-between;gap:32px;
-}
-.show-caption-title{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(40px,6vw,80px);
-  line-height:.9;color:var(--w);
-}
-.show-caption-sub{
-  font-size:13px;color:var(--m2);
-  font-family:'Syne',sans-serif;
-  letter-spacing:.15em;text-transform:uppercase;
-  text-align:right;max-width:240px;
-}
-
-/* ARTISTES GRID */
-.artistes-section{padding:120px 0;background:var(--bg2)}
-.artistes-intro{margin-bottom:64px}
-.artistes-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:2px;background:var(--line);border:1px solid var(--line);
-}
-.artiste-card{
-  background:var(--bg2);
-  padding:44px 36px;
-  position:relative;overflow:hidden;
-  transition:background .35s;
-}
-.artiste-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .45s ease;
-}
-.artiste-card:hover{background:var(--bg3)}
-.artiste-card:hover::before{transform:scaleX(1)}
-.artiste-avatar{
-  width:64px;height:64px;border-radius:50%;
-  background:rgba(139,47,201,.15);
-  border:1px solid rgba(139,47,201,.3);
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:22px;
-  color:var(--p1);
-}
-.artiste-name{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--w);margin-bottom:8px}
-.artiste-type{
-  font-family:'Syne',sans-serif;font-size:10px;font-weight:700;
-  letter-spacing:.3em;text-transform:uppercase;
-  background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;margin-bottom:16px;
-}
-.artiste-desc{font-size:13.5px;color:var(--m);line-height:1.78;margin-bottom:20px}
-.artiste-tags{display:flex;flex-wrap:wrap;gap:6px}
-.artiste-tag{
-  font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--m2);
-  border:1px solid var(--line);padding:5px 10px;border-radius:2px;
-}
-
-/* VIDEOS */
-.videos-section{padding:120px 0;background:var(--bg);border-top:1px solid var(--line)}
+.show-visual{background:var(--bg2);border-bottom:1px solid var(--line);position:relative;overflow:hidden;height:70vh;min-height:500px}
+.show-visual img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.show-visual-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,rgba(8,8,8,.4) 50%,transparent 100%)}
+.show-visual-caption{position:absolute;bottom:48px;left:0;right:0;z-index:2}
+.show-caption-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:32px}
+.show-caption-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);line-height:.9;color:var(--w)}
+.show-caption-sub{font-size:13px;color:var(--m2);font-family:'Syne',sans-serif;letter-spacing:.15em;text-transform:uppercase;text-align:right;max-width:240px}
+.videos-section{padding:120px 0;background:var(--bg2);border-top:1px solid var(--line)}
 .videos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);border:1px solid var(--line);margin-top:56px}
 .video-item{position:relative;overflow:hidden;background:var(--bg3);aspect-ratio:16/9;cursor:pointer}
 .video-item video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
@@ -162,19 +84,12 @@ ul{list-style:none}
 .video-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;transition:background .3s,transform .3s}
 .video-item:hover .video-play{background:rgba(196,37,110,.5);transform:translate(-50%,-50%) scale(1.1)}
 .video-play svg{width:18px;height:18px;color:white;margin-left:3px}
-.video-info{position:absolute;bottom:0;left:0;right:0;padding:20px 24px}
-.video-tag{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--p1);margin-bottom:5px}
-.video-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--w)}
-
-/* MODAL */
 .modal{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.92);backdrop-filter:blur(20px);align-items:center;justify-content:center}
 .modal.open{display:flex}
 .modal-inner{position:relative;width:90%;max-width:960px}
 .modal-inner video{width:100%;border-radius:2px;display:block}
 .modal-close{position:absolute;top:-44px;right:0;background:none;border:none;color:var(--m2);font-size:28px;cursor:pointer;line-height:1;transition:color .2s}
 .modal-close:hover{color:var(--w)}
-
-/* CTA */
 .cta-band{background:var(--bg2);border-top:1px solid var(--line);padding:88px 0}
 .cta-band-inner{display:flex;align-items:center;justify-content:space-between;gap:48px}
 .cta-band-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5.5vw,76px);line-height:.92;color:var(--w)}
@@ -184,12 +99,9 @@ ul{list-style:none}
 .contact-line svg{width:15px;height:15px;flex-shrink:0;color:var(--p1)}
 .contact-line a{transition:color .2s}
 .contact-line a:hover{color:var(--w)}
-
-/* FOOTER */
 footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:64px;margin-bottom:52px}
 .footer-desc{font-size:13px;color:var(--m);line-height:1.82;max-width:290px;margin-bottom:18px}
-.footer-address{font-size:12px;color:var(--m);line-height:1.7;font-style:normal}
 .footer-col-title{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--m2);margin-bottom:20px}
 .footer-nav{display:flex;flex-direction:column;gap:10px}
 .footer-nav a{font-size:13px;color:var(--m);display:flex;align-items:center;gap:9px;transition:color .2s}
@@ -207,10 +119,8 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 .footer-legal{display:flex;gap:24px}
 .footer-legal a{font-family:'Syne',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--m);transition:color .2s}
 .footer-legal a:hover{color:var(--w)}
-
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
 @media(max-width:1024px){
-  .artistes-grid{grid-template-columns:repeat(2,1fr)}
   .videos-grid{grid-template-columns:1fr}
   .footer-top{grid-template-columns:1fr 1fr;gap:44px}
   .show-caption-inner{flex-direction:column;align-items:flex-start}
@@ -220,7 +130,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
   .wrap{padding:0 20px}
   .nav-links,.btn-border{display:none}
   .burger{display:flex}
-  .artistes-grid{grid-template-columns:1fr}
   .cta-band-inner{flex-direction:column;align-items:flex-start}
   .footer-top{grid-template-columns:1fr;gap:36px}
   .footer-bottom{flex-direction:column;gap:14px;text-align:center}
@@ -228,20 +137,10 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 </style>
 </head>
 <body>
-
-<!-- NAV -->
 <header class="header" id="hdr">
   <div class="wrap nav">
     <a href="/" class="brand">
-      <svg class="brand-svg" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="gNav" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#8B2FC9"/><stop offset="48%" stop-color="#C4256E"/><stop offset="100%" stop-color="#FF6B2B"/>
-          </linearGradient>
-        </defs>
-        <path d="M13 14 L13 95 L31 95 L31 66 L57 95 L79 95 L51 63 C69 57 79 45 79 31 C79 17 67 14 51 14 Z M31 29 L49 29 C57 29 63 34 63 41 C63 48 57 53 49 53 L31 53 Z" fill="url(#gNav)"/>
-        <polygon points="13,14 39,14 13,42" fill="#080808"/>
-      </svg>
+      <img src="/logo-r-couleur.png" style="height:42px;width:auto;" alt="Ridgee Production"/>
       <div class="brand-text">
         <div class="brand-name">RIDGEE</div>
         <div class="brand-tag">Production</div>
@@ -252,115 +151,86 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
         <li><a href="/">Accueil</a></li>
         <li><a href="/services.html">Services</a></li>
         <li><a href="/artistes.html" class="active">Artistes &amp; Shows</a></li>
-        <li><a href="/references.html">Références</a></li>         <li><a href="/a-propos.html">À propos</a></li>
+        <li><a href="/references.html">Références</a></li>
+        <li><a href="/a-propos.html">À propos</a></li>
       </ul>
     </nav>
     <a href="/contact.html" class="btn btn-border">Contact</a>
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <div class="mobile-nav" id="mobileNav">
     <a href="/">Accueil</a>
     <a href="/services.html">Services</a>
     <a href="/artistes.html">Artistes &amp; Shows</a>
     <a href="/references.html">Références</a>
+    <a href="/a-propos.html">À propos</a>
     <a href="/contact.html" class="mobile-cta">Contact</a>
   </div>
 </header>
-
 <main>
-
-<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="page-hero-grid"></div>
   <div class="wrap page-hero-content">
     <div class="page-hero-badge"><span class="page-hero-badge-dot"></span>Booking &amp; Performance</div>
     <h1><span class="grad-txt">ARTISTES</span><br/>&amp; SHOWS</h1>
-    <p class="page-hero-sub">Un réseau d'artistes confirmés en France et à l'international — drag queens, performers, entertainers. Des shows qui créent l'événement.</p>
+    <p class="page-hero-sub">Un réseau d'artistes confirmés en France et à l'international. Des shows qui créent l'événement.</p>
   </div>
 </section>
-
-<!-- SHOW VISUAL -->
 <div class="show-visual">
   <img src="/Drag-Queen.jpg" alt="Show Ridgee Production"/>
   <div class="show-visual-overlay"></div>
   <div class="show-visual-caption">
     <div class="wrap">
       <div class="show-caption-inner">
-        <div class="show-caption-title">LE SHOW<br/><span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">COMME SIGNATURE</span></div>
+        <div class="show-caption-title">LE SHOW<br/><span class="grad-txt">COMME SIGNATURE</span></div>
         <div class="show-caption-sub">50+ artistes · FR · UK · LT · ES · IT · PT · US</div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- ARTISTES -->
-<section class="artistes-section" style="padding:80px 0 0;background:var(--bg2)">
-  <div class="wrap">
-    <div class="artistes-intro rv">
-      <p class="eyebrow">Nos productions</p>
-      <h2 class="display">LES<br/><span class="grad-txt">SHOWS</span></h2>
-      <p class="body-p">Des performances live captées sur le terrain — un aperçu de l'énergie et de la qualité de nos productions.</p>
-    </div>
-  </div>
-</section>
-
-<!-- VIDEOS -->
 <section class="videos-section">
   <div class="wrap">
     <div class="rv">
-      <p class="eyebrow">Extraits de shows</p>
-      <h2 class="display">LE TRAVAIL<br/><span class="grad-txt">PARLE</span></h2>
+      <p class="eyebrow">Extraits live</p>
+      <h2 class="display">LES<br/><span class="grad-txt">SHOWS</span></h2>
+      <p class="body-p">Des performances live captées sur le terrain — un aperçu de l'énergie et de la qualité de nos productions.</p>
     </div>
     <div class="videos-grid rv d1">
-
       <div class="video-item" onclick="openModal('/Lova.mp4')">
         <video src="/Lova.mp4" muted loop playsinline preload="metadata"></video>
         <div class="video-overlay"></div>
         <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-     <div class="video-info"></div>
       </div>
-
       <div class="video-item" onclick="openModal('/perf_limelight_rose_lova.mp4')">
         <video src="/perf_limelight_rose_lova.mp4" muted loop playsinline preload="metadata"></video>
         <div class="video-overlay"></div>
         <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-       <div class="video-info"></div>
       </div>
-
       <div class="video-item" onclick="openModal('/MissTik.mp4')">
         <video src="/MissTik.mp4" muted loop playsinline preload="metadata"></video>
         <div class="video-overlay"></div>
         <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-       <div class="video-info"></div>
-
+      </div>
       <div class="video-item" onclick="openModal('/Izera.mp4')">
         <video src="/Izera.mp4" muted loop playsinline preload="metadata"></video>
         <div class="video-overlay"></div>
         <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-<div class="video-info"></div>
       </div>
-
     </div>
   </div>
 </section>
-
-<!-- MODAL -->
 <div class="modal" id="modal" onclick="closeModal(event)">
   <div class="modal-inner">
     <button class="modal-close" onclick="closeModal()">&times;</button>
     <video id="modalVideo" controls playsinline></video>
   </div>
 </div>
-
-<!-- CTA -->
 <section class="cta-band">
   <div class="wrap">
     <div class="cta-band-inner rv">
       <div>
         <h2 class="cta-band-title">BOOKER UN<br/><span class="grad-txt">ARTISTE</span></h2>
-        <p class="cta-band-sub">Un show, un événement, une soirée — parlons-nous et trouvons ensemble l'artiste idéal pour votre projet.</p>
+        <p class="cta-band-sub">Un show, un événement, une soirée — parlons-nous et trouvons l'artiste idéal pour votre projet.</p>
       </div>
       <div class="cta-right">
         <a href="/contact.html" class="btn btn-fill" style="font-size:12px;padding:15px 36px">Demander un booking</a>
@@ -378,23 +248,15 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </section>
-
 </main>
-
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-top">
       <div>
         <div style="margin-bottom:16px">
-          <svg width="72" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="gFt" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#8B2FC9"/><stop offset="48%" stop-color="#C4256E"/><stop offset="100%" stop-color="#FF6B2B"/></linearGradient></defs>
-            <path d="M13 14 L13 95 L31 95 L31 66 L57 95 L79 95 L51 63 C69 57 79 45 79 31 C79 17 67 14 51 14 Z M31 29 L49 29 C57 29 63 34 63 41 C63 48 57 53 49 53 L31 53 Z" fill="url(#gFt)"/>
-            <polygon points="13,14 39,14 13,42" fill="#080808"/>
-          </svg>
+          <img src="/logo-ridgee-blanc.png" style="height:60px;width:auto;" alt="Ridgee Production"/>
         </div>
-        <p class="footer-desc">Production d'événements et production audiovisuelle — de la direction artistique au rendu final.</p>
-        <address class="footer-address">13 rue Pierre Mauroy<br/>75018 Paris, France</address>
+        <p class="footer-desc">Production d'événements et production audiovisuelle — de la direction artistique au rendu final, en France et à l'international.</p>
       </div>
       <div>
         <div class="footer-col-title">Navigation</div>
@@ -403,6 +265,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
           <a href="/services.html">Services</a>
           <a href="/artistes.html">Artistes &amp; Shows</a>
           <a href="/references.html">Références</a>
+          <a href="/a-propos.html">À propos</a>
           <a href="/contact.html">Contact</a>
         </nav>
       </div>
@@ -421,23 +284,13 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     </div>
   </div>
 </footer>
-
 <script>
   const hdr=document.getElementById('hdr');
   window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40),{passive:true});
   const burger=document.getElementById('burger'),menu=document.getElementById('mobileNav');
-  burger.addEventListener('click',()=>{
-    const o=menu.classList.toggle('open');
-    burger.classList.toggle('open',o);
-    burger.setAttribute('aria-expanded',o);
-  });
-  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-    menu.classList.remove('open');burger.classList.remove('open');
-    burger.setAttribute('aria-expanded',false);
-  }));
-  const io=new IntersectionObserver(e=>e.forEach(el=>{
-    if(el.isIntersecting){el.target.classList.add('on');io.unobserve(el.target)}
-  }),{threshold:.12});
+  burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o)});
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+  const io=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('on');io.unobserve(el.target)}}),{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   document.querySelectorAll('.video-item').forEach(item=>{
     const v=item.querySelector('video');
