@@ -99,18 +99,11 @@ ul{list-style:none}
 .ticker-item{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--m);padding:0 32px;display:inline-flex;align-items:center;gap:32px}
 .ticker-dot{width:4px;height:4px;border-radius:50%;background:var(--p1);flex-shrink:0}
 
-/* ABOUT */
-.about{background:var(--bg2);padding:130px 0;border-bottom:1px solid var(--line)}
-.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-img{position:relative;overflow:hidden;border:1px solid var(--line)}
-.about-img img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5}
-.about-img-tag{position:absolute;bottom:20px;left:20px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--m2);background:rgba(0,0,0,.6);backdrop-filter:blur(12px);border:1px solid var(--line);padding:7px 14px;border-radius:2px}
-
 /* EXPERTISE */
-.expertise{background:var(--bg);border-bottom:1px solid var(--line);padding:130px 0}
+.expertise{background:var(--bg2);border-bottom:1px solid var(--line);padding:130px 0}
 .expertise-intro{margin-bottom:72px}
 .expertise-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);border:1px solid var(--line)}
-.pillar{background:var(--bg);padding:56px 48px;position:relative;overflow:hidden;transition:background .35s}
+.pillar{background:var(--bg2);padding:56px 48px;position:relative;overflow:hidden;transition:background .35s}
 .pillar::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .45s ease}
 .pillar:hover{background:var(--bg3)}
 .pillar:hover::before{transform:scaleX(1)}
@@ -123,22 +116,76 @@ ul{list-style:none}
 .pillar-list li{display:flex;align-items:center;gap:11px;font-size:13px;color:var(--m2)}
 .pillar-list li::before{content:'';display:block;width:14px;height:1px;background:var(--grad);flex-shrink:0}
 
+/* ABOUT SABRI */
+.about-sabri{background:var(--bg);padding:130px 0;border-bottom:1px solid var(--line)}
+.about-sabri-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-photo{position:relative;overflow:hidden;border:1px solid var(--line);aspect-ratio:3/4}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.about-photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.6) 0%,transparent 50%)}
+.about-photo-tag{position:absolute;bottom:20px;left:20px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--m2);background:rgba(0,0,0,.6);backdrop-filter:blur(12px);border:1px solid var(--line);padding:7px 14px;border-radius:2px}
+.about-content{}
+.about-stats{display:flex;gap:36px;margin-top:36px;margin-bottom:36px}
+.about-stat{}
+.about-stat-val{font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.about-stat-lbl{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--m);margin-top:4px}
+
+/* PARTENAIRES BANDE */
+.partners-band{
+  background:var(--bg2);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:64px 0;
+  overflow:hidden;
+}
+.partners-band-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:48px;
+}
+.partners-band-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(36px,4vw,60px);
+  line-height:.95;color:var(--w);
+}
+.partners-band-sub{
+  font-size:13px;color:var(--m);max-width:300px;text-align:right;line-height:1.7;
+}
+.partners-logo-full{
+  width:100%;
+  border:1px solid var(--line);
+  padding:48px 56px;
+  background:var(--bg3);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.partners-logo-full img{
+  width:100%;
+  max-width:900px;
+  height:auto;
+  max-height:120px;
+  object-fit:contain;
+  filter:grayscale(0.3) brightness(1.1);
+  opacity:.85;
+  transition:.4s;
+}
+.partners-logo-full img:hover{
+  filter:grayscale(0) brightness(1.3);
+  opacity:1;
+}
+
 /* VIDEOS */
-.videos{background:var(--bg2);padding:130px 0;border-bottom:1px solid var(--line)}
+.videos{background:var(--bg);padding:130px 0;border-bottom:1px solid var(--line)}
 .videos-hd{margin-bottom:56px}
 .videos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
 .video-item{position:relative;overflow:hidden;background:var(--bg3);aspect-ratio:16/9;cursor:pointer}
 .video-item video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 .video-item:hover video{transform:scale(1.03)}
-.video-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 50%);opacity:1;transition:opacity .3s}
+.video-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 50%)}
 .video-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;transition:background .3s,transform .3s}
 .video-item:hover .video-play{background:rgba(196,37,110,.5);transform:translate(-50%,-50%) scale(1.1)}
 .video-play svg{width:18px;height:18px;color:white;margin-left:3px}
-.video-info{position:absolute;bottom:0;left:0;right:0;padding:20px 24px}
-.video-tag{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--p1);margin-bottom:5px}
-.video-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--w)}
 
-/* MODAL VIDEO */
+/* MODAL */
 .modal{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.92);backdrop-filter:blur(20px);align-items:center;justify-content:center}
 .modal.open{display:flex}
 .modal-inner{position:relative;width:90%;max-width:960px}
@@ -147,10 +194,10 @@ ul{list-style:none}
 .modal-close:hover{color:var(--w)}
 
 /* SERVICES */
-.services{background:var(--bg);padding:130px 0}
+.services{background:var(--bg2);padding:130px 0}
 .services-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:64px;gap:32px}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.svc{background:var(--bg);padding:44px 34px;position:relative;overflow:hidden;transition:background .3s}
+.svc{background:var(--bg2);padding:44px 34px;position:relative;overflow:hidden;transition:background .3s}
 .svc::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
 .svc:hover{background:var(--card)}
 .svc:hover::after{transform:scaleX(1)}
@@ -161,7 +208,7 @@ ul{list-style:none}
 .svc-desc{font-size:13.5px;color:var(--m);line-height:1.8}
 
 /* REFS */
-.refs{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:130px 0}
+.refs{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:130px 0}
 .refs-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:88px;align-items:start}
 .refs-highlights{display:flex;flex-direction:column;margin-top:42px}
 .ref-item{display:flex;align-items:flex-start;gap:22px;padding:24px 0;border-bottom:1px solid var(--line)}
@@ -169,23 +216,15 @@ ul{list-style:none}
 .ref-ico{width:40px;height:40px;flex-shrink:0;background:rgba(139,47,201,.1);border:1px solid rgba(139,47,201,.22);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--p1)}
 .ref-title{font-family:'Syne',sans-serif;font-size:14.5px;font-weight:700;color:var(--w);margin-bottom:4px}
 .ref-sub{font-size:13px;color:var(--m);line-height:1.65}
-
-/* CLIENTS LOGOS */
-.clients-logo-row{margin-top:40px;padding:28px 32px;background:var(--bg3);border:1px solid var(--line);display:flex;align-items:center;gap:12px}
-.clients-logo-label{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--m);white-space:nowrap}
-.clients-logo-img{height:32px;width:auto;object-fit:contain;opacity:.5;filter:grayscale(1);transition:.3s}
-.clients-logo-img:hover{opacity:1;filter:grayscale(0)}
-
-/* GEO */
 .geo-label{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--m);margin-bottom:22px}
 .geo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line);margin-bottom:28px}
-.geo-city{background:var(--bg2);padding:14px 16px;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--m);text-align:center;transition:.25s;cursor:default}
+.geo-city{background:var(--bg);padding:14px 16px;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--m);text-align:center;transition:.25s;cursor:default}
 .geo-city:hover{background:rgba(196,37,110,.1);color:var(--w)}
 .geo-city.hot{background:rgba(139,47,201,.12);border:1px solid rgba(139,47,201,.28);color:var(--w)}
 .geo-note{font-size:13px;color:var(--m);line-height:1.7}
 
 /* CTA BAND */
-.cta-band{background:var(--bg);border-bottom:1px solid var(--line);padding:88px 0}
+.cta-band{background:var(--bg2);border-bottom:1px solid var(--line);padding:88px 0}
 .cta-band-inner{display:flex;align-items:center;justify-content:space-between;gap:48px}
 .cta-band-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5.5vw,76px);line-height:.92;color:var(--w)}
 .cta-band-sub{font-size:15px;color:var(--m);margin-top:14px;max-width:420px;line-height:1.75}
@@ -199,7 +238,6 @@ ul{list-style:none}
 footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:64px;margin-bottom:52px}
 .footer-desc{font-size:13px;color:var(--m);line-height:1.82;max-width:290px;margin-bottom:18px}
-.footer-address{font-size:12px;color:var(--m);line-height:1.7;font-style:normal}
 .footer-col-title{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--m2);margin-bottom:20px}
 .footer-nav{display:flex;flex-direction:column;gap:10px}
 .footer-nav a{font-size:13px;color:var(--m);display:flex;align-items:center;gap:9px;transition:color .2s}
@@ -227,10 +265,9 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
   .hero-img-col{display:none}
   .hero-col{padding:60px 0}
   .hero-scroll{display:none}
-  .about-inner{grid-template-columns:1fr}
-  .about-img{display:none}
   .expertise-grid{grid-template-columns:1fr}
-  .videos-grid{grid-template-columns:1fr}
+  .about-sabri-inner{grid-template-columns:1fr}
+  .about-photo{display:none}
   .refs-inner{grid-template-columns:1fr;gap:52px}
   .footer-top{grid-template-columns:1fr 1fr;gap:44px}
 }
@@ -247,6 +284,10 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
   .hero-kpis{flex-direction:column}
   .kpi-box{border-right:none;border-bottom:1px solid var(--line)}
   .kpi-box:last-child{border-bottom:none}
+  .partners-band-header{flex-direction:column;align-items:flex-start;gap:16px}
+  .partners-band-sub{text-align:left}
+  .partners-logo-full{padding:28px 20px}
+  .about-stats{flex-wrap:wrap;gap:24px}
 }
 </style>
 </head>
@@ -259,9 +300,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
       <svg class="brand-svg" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="gNav" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#8B2FC9"/>
-            <stop offset="48%" stop-color="#C4256E"/>
-            <stop offset="100%" stop-color="#FF6B2B"/>
+            <stop offset="0%" stop-color="#8B2FC9"/><stop offset="48%" stop-color="#C4256E"/><stop offset="100%" stop-color="#FF6B2B"/>
           </linearGradient>
         </defs>
         <path d="M13 14 L13 95 L31 95 L31 66 L57 95 L79 95 L51 63 C69 57 79 45 79 31 C79 17 67 14 51 14 Z M31 29 L49 29 C57 29 63 34 63 41 C63 48 57 53 49 53 L31 53 Z" fill="url(#gNav)"/>
@@ -278,6 +317,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
         <li><a href="/services.html">Services</a></li>
         <li><a href="/artistes.html">Artistes &amp; Shows</a></li>
         <li><a href="/references.html">Références</a></li>
+        <li><a href="/a-propos.html">À propos</a></li>
       </ul>
     </nav>
     <a href="/contact.html" class="btn btn-border">Contact</a>
@@ -290,6 +330,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
     <a href="/services.html">Services</a>
     <a href="/artistes.html">Artistes &amp; Shows</a>
     <a href="/references.html">Références</a>
+    <a href="/a-propos.html">À propos</a>
     <a href="/contact.html" class="mobile-cta">Contact</a>
   </div>
 </header>
@@ -343,24 +384,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
   </div>
 </div>
 
-<!-- ABOUT -->
-<section class="about">
-  <div class="wrap">
-    <div class="about-inner">
-      <div class="about-img rv">
-        <img src="/Accueil.jpg" alt="Ridgee Production"/>
-        <span class="about-img-tag">Behind the scenes</span>
-      </div>
-      <div>
-        <p class="eyebrow rv">Notre identité</p>
-        <h2 class="display rv d1">L'IMAGE<br/>AU SERVICE<br/><span class="grad-txt">DE L'IDÉE</span></h2>
-        <p class="body-p rv d2">Ridgee Production œuvre à la croisée de la créativité artistique et de l'exécution technique. Chaque projet est abordé avec la même exigence : trouver le langage visuel juste, au service du message.</p>
-        <p class="body-p rv d3" style="margin-top:18px">De la conception au rendu final, nous accompagnons marques, diffuseurs et agences dans toutes les étapes de leur production — événementielle comme audiovisuelle.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- EXPERTISE -->
 <section class="expertise">
   <div class="wrap">
@@ -400,6 +423,55 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
   </div>
 </section>
 
+<!-- À PROPOS SABRI -->
+<section class="about-sabri">
+  <div class="wrap">
+    <div class="about-sabri-inner">
+      <div class="about-photo rv">
+        <img src="/Sabri.jpg" alt="Sabri — Fondateur Ridgee Production"/>
+        <div class="about-photo-overlay"></div>
+        <span class="about-photo-tag">Fondateur · Producteur</span>
+      </div>
+      <div>
+        <p class="eyebrow rv">Le fondateur</p>
+        <h2 class="display rv d1">SABRI<br/><span class="grad-txt">HADJ</span></h2>
+        <p class="body-p rv d2">Artiste de scène reconverti en producteur. 11 ans de théâtre d'improvisation, 15 ans d'expertise commerciale et managériale — et depuis 2024, Ridgee Production à la croisée du spectacle vivant et de l'audiovisuel.</p>
+        <p class="body-p rv d3" style="margin-top:16px">Aujourd'hui en formation à l'ESRA Paris pour la production audiovisuelle, je déploie Ridgee sur des projets live, des captations et des formats événementiels en France et à l'international.</p>
+        <div class="about-stats rv d3">
+          <div class="about-stat">
+            <div class="about-stat-val">11</div>
+            <div class="about-stat-lbl">Ans de scène</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-val">15</div>
+            <div class="about-stat-lbl">Ans d'expérience</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-val">7</div>
+            <div class="about-stat-lbl">Pays déployés</div>
+          </div>
+        </div>
+        <div class="rv d4">
+          <a href="/a-propos.html" class="btn btn-border" style="margin-top:8px">Voir mon parcours →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTENAIRES PLEINE LARGEUR -->
+<section class="partners-band">
+  <div class="wrap">
+    <div class="partners-band-header rv">
+      <h2 class="partners-band-title">ILS NOUS<br/><span class="grad-txt">FONT CONFIANCE</span></h2>
+      <p class="partners-band-sub">Prestataires et partenaires qui font partie de l'écosystème Ridgee Production.</p>
+    </div>
+    <div class="partners-logo-full rv d1">
+      <img src="/Logos-prestas.png" alt="Partenaires Ridgee Production"/>
+    </div>
+  </div>
+</section>
+
 <!-- VIDEOS -->
 <section class="videos">
   <div class="wrap">
@@ -408,47 +480,26 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
       <h2 class="display">LE TRAVAIL<br/><span class="grad-txt">PARLE</span></h2>
     </div>
     <div class="videos-grid rv d1">
-
       <div class="video-item" onclick="openModal('/Lova.mp4')">
         <video src="/Lova.mp4" muted loop playsinline preload="metadata"></video>
         <div class="video-overlay"></div>
         <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-        <div class="video-info">
-          <div class="video-tag">Performance Live</div>
-          <div class="video-title">Lova Ladiva — Show</div>
-        </div>
       </div>
-
       <div class="video-item" onclick="openModal('/perf_limelight_rose_lova.mp4')">
         <video src="/perf_limelight_rose_lova.mp4" muted loop playsinline preload="metadata"></video>
         <div class="video-overlay"></div>
         <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-        <div class="video-info">
-          <div class="video-tag">Captation Live</div>
-          <div class="video-title">Limelight Rose — Lova</div>
-        </div>
       </div>
-
       <div class="video-item" onclick="openModal('/MissTik.mp4')">
         <video src="/MissTik.mp4" muted loop playsinline preload="metadata"></video>
         <div class="video-overlay"></div>
         <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-        <div class="video-info">
-          <div class="video-tag">Performance</div>
-          <div class="video-title">MissTik — Show</div>
-        </div>
       </div>
-
       <div class="video-item" onclick="openModal('/Izera.mp4')">
         <video src="/Izera.mp4" muted loop playsinline preload="metadata"></video>
         <div class="video-overlay"></div>
         <div class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-        <div class="video-info">
-          <div class="video-tag">Production</div>
-          <div class="video-title">Izera — Captation</div>
-        </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -457,7 +508,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 <div class="modal" id="modal" onclick="closeModal(event)">
   <div class="modal-inner">
     <button class="modal-close" onclick="closeModal()">&times;</button>
-    <video id="modalVideo" controls playsinline style="width:100%;border-radius:2px"></video>
+    <video id="modalVideo" controls playsinline></video>
   </div>
 </div>
 
@@ -534,10 +585,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
             <div><div class="ref-title">Réseau international confirmé</div><div class="ref-sub">DragCon UK · Vilnius · Londres · New York · Paris · Toulouse</div></div>
           </div>
         </div>
-        <div class="clients-logo-row rv d4">
-          <span class="clients-logo-label">Partenaires</span>
-          <img class="clients-logo-img" src="/Logos-prestas.png" alt="Partenaires Ridgee Production"/>
-        </div>
       </div>
       <div class="rv d3">
         <div class="geo-label">Présence géographique</div>
@@ -601,7 +648,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
           </svg>
         </div>
         <p class="footer-desc">Production d'événements et production audiovisuelle — de la direction artistique au rendu final, en France et à l'international.</p>
-        <address class="footer-address">13 rue Pierre Mauroy<br/>75018 Paris, France</address>
       </div>
       <div>
         <div class="footer-col-title">Navigation</div>
@@ -610,6 +656,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
           <a href="/services.html">Services</a>
           <a href="/artistes.html">Artistes &amp; Shows</a>
           <a href="/references.html">Références</a>
+          <a href="/a-propos.html">À propos</a>
           <a href="/contact.html">Contact</a>
         </nav>
       </div>
@@ -630,50 +677,29 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 28px
 </footer>
 
 <script>
-  // Nav scroll
   const hdr=document.getElementById('hdr');
   window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40),{passive:true});
-
-  // Burger
   const burger=document.getElementById('burger'),menu=document.getElementById('mobileNav');
-  burger.addEventListener('click',()=>{
-    const o=menu.classList.toggle('open');
-    burger.classList.toggle('open',o);
-    burger.setAttribute('aria-expanded',o);
-  });
-  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-    menu.classList.remove('open');burger.classList.remove('open');
-    burger.setAttribute('aria-expanded',false);
-  }));
-
-  // Reveal
-  const io=new IntersectionObserver(e=>e.forEach(el=>{
-    if(el.isIntersecting){el.target.classList.add('on');io.unobserve(el.target)}
-  }),{threshold:.12});
+  burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o)});
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+  const io=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('on');io.unobserve(el.target)}}),{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-
-  // Video hover preview
   document.querySelectorAll('.video-item').forEach(item=>{
     const v=item.querySelector('video');
     item.addEventListener('mouseenter',()=>v.play());
     item.addEventListener('mouseleave',()=>{v.pause();v.currentTime=0});
   });
-
-  // Modal
   function openModal(src){
     const modal=document.getElementById('modal');
     const vid=document.getElementById('modalVideo');
-    vid.src=src;
-    modal.classList.add('open');
-    vid.play();
+    vid.src=src;modal.classList.add('open');vid.play();
     document.body.style.overflow='hidden';
   }
   function closeModal(e){
     if(e&&e.target!==document.getElementById('modal')&&!e.target.classList.contains('modal-close'))return;
-    const modal=document.getElementById('modal');
     const vid=document.getElementById('modalVideo');
     vid.pause();vid.src='';
-    modal.classList.remove('open');
+    document.getElementById('modal').classList.remove('open');
     document.body.style.overflow='';
   }
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal({target:document.getElementById('modal')})});
